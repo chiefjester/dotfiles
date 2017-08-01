@@ -45,21 +45,21 @@ set list                                                  " show non-printable c
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+ " customize shown characters
 
 " ---- mappings
-" Make it easy to edit vimrc file use $MYVIMRC as global variable
+" make it easy to edit vimrc file use $myvimrc as global variable
 nmap <Leader>ev :tabedit ~/.vimrc<cr>
 
-" Automatically source the Vimrc file on save.
+" automatically source the vimrc file on save.
 autocmd BufWritePost $MYVIMRC source %
 
-" Move visual block up and down easily
+" move visual block up and down easily
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-" EasyAlign mappings
+" easyalign mappings
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 
-" make EasyAlign ignore spaces
+" make easyalign ignore spaces
 let g:easy_align_ignore_groups = []
 
 " custom function to strip spaces ~ from Drew Neil
@@ -87,7 +87,7 @@ let g:UltiSnipsRemoveSelectModeMappings = 0
 " optional I forgot what this do
 inoremap <silent> <c-u> <c-r>=cm#sources#ultisnips#trigger_or_popup("\<Plug>(ultisnips_expand)")<cr>
 
-" If you want :UltiSnipsEdit to split your window.
+" if you want :ultisnipsedit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
 " ---- honza/vim-snippets
@@ -126,18 +126,18 @@ endif
 if has("nvim")
   set inccommand=nosplit
 
-  " Make escape work in the Neovim terminal.
+  " make escape work in the neovim terminal.
   tnoremap <Esc> <C-\><C-n>
 
-  " Make navigation into and out of Neovim terminal splits nicer.
+  " make navigation into and out of neovim terminal splits nicer.
   tnoremap <C-h> <C-\><C-N><C-w>h
   tnoremap <C-j> <C-\><C-N><C-w>j
   tnoremap <C-k> <C-\><C-N><C-w>k
   tnoremap <C-l> <C-\><C-N><C-w>l
 
-  " I like relative numbering when in normal mode.
+  " i like relative numbering when in normal mode.
   autocmd TermOpen * setlocal conceallevel=0 colorcolumn=0 relativenumber
 
-  " Prefer Neovim terminal insert mode to normal mode.
+  " prefer neovim terminal insert mode to normal mode.
   autocmd BufEnter term://* startinsert
 endif
