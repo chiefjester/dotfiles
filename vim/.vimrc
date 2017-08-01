@@ -40,7 +40,6 @@ set rtp+=/usr/local/opt/fzf
 
 colorscheme PaperColor
 
-
 " non printable characters
 set list                                                  " show non-printable characters
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+ " customize shown characters
@@ -49,7 +48,7 @@ set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+ " customize shown char
 " Make it easy to edit vimrc file use $MYVIMRC as global variable
 nmap <Leader>ev :tabedit ~/.vimrc<cr>
 
-"Automatically source the Vimrc file on save.
+" Automatically source the Vimrc file on save.
 autocmd BufWritePost $MYVIMRC source %
 
 " Move visual block up and down easily
@@ -78,12 +77,11 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
-
 " ---- ultisnips
-let g:ycm_path_to_python_interpreter="/usr/local/bin/python3"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsExpandTrigger    = "<Plug>(ultisnips_expand)"
-let g:UltiSnipsJumpBackwardTrigger  = "<s-tab>"
+let g:ycm_path_to_python_interpreter    = "/usr/local/bin/python3"
+let g:UltiSnipsJumpForwardTrigger       = "<tab>"
+let g:UltiSnipsExpandTrigger            = "<Plug>(ultisnips_expand)"
+let g:UltiSnipsJumpBackwardTrigger      = "<s-tab>"
 let g:UltiSnipsRemoveSelectModeMappings = 0
 
 " optional I forgot what this do
@@ -109,7 +107,6 @@ let g:user_emmet_leader_key='<C-Z>'
 " ---- bufferline
 let g:bufferline_echo = 1
 
-
 " run in 256 on normal vim
 if !has('gui_running')
   set t_Co=256
@@ -129,7 +126,7 @@ endif
 if has("nvim")
   set inccommand=nosplit
 
-" Make escape work in the Neovim terminal.
+  " Make escape work in the Neovim terminal.
   tnoremap <Esc> <C-\><C-n>
 
   " Make navigation into and out of Neovim terminal splits nicer.
@@ -138,7 +135,7 @@ if has("nvim")
   tnoremap <C-k> <C-\><C-N><C-w>k
   tnoremap <C-l> <C-\><C-N><C-w>l
 
-" I like relative numbering when in normal mode.
+  " I like relative numbering when in normal mode.
   autocmd TermOpen * setlocal conceallevel=0 colorcolumn=0 relativenumber
 
   " Prefer Neovim terminal insert mode to normal mode.
