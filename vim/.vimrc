@@ -43,8 +43,8 @@ colorscheme PaperColor
 " non printable characters
 set list                                                  " show non-printable characters
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+ " customize shown characters
-" --------Mappings--------"
 
+" ---- mappings
 " Make it easy to edit vimrc file use $MYVIMRC as global variable
 nmap <Leader>ev :tabedit ~/.vimrc<cr>
 
