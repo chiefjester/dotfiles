@@ -16,6 +16,7 @@ filetype indent on             " add indent on file type
 filetype plugin on             " turn on plugin for file type
 set bg=dark                    " use dark background color
 set laststatus=2               " always show the status line
+set expandtab                  " tab to spaces
 
 " line number
 set rnu                        " turn on relative numbers
@@ -50,6 +51,10 @@ nmap <Leader>ev :tabedit ~/.vimrc<cr>
 
 " automatically source the vimrc file on save.
 autocmd BufWritePost $MYVIMRC source %
+
+" map space to nerd tree
+noremap <leader>kb :NERDTreeToggle<CR>
+let NERDTreeIgnore=['node_modules$']
 
 " move visual block up and down easily
 vnoremap J :m '>+1<CR>gv=gv

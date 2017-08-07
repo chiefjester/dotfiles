@@ -36,6 +36,7 @@ Plug 'prettier/vim-prettier', {
 	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] } 
 Plug 'scrooloose/nerdcommenter'
 Plug 'pangloss/vim-javascript'
+Plug 'w0rp/ale'
 "Plug 'sheerun/vim-polyglot'
 
 if has('nvim')
