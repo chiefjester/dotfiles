@@ -121,12 +121,12 @@ if !has('gui_running')
 endif
 
 " moving lines
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
-inoremap <C-j> <Esc>:m .+1<CR>==gi
-inoremap <C-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " nvim autocompletion"
 if has('nvim')
@@ -146,10 +146,10 @@ if has("nvim")
   tnoremap <Esc> <C-\><C-n>
 
   " make navigation into and out of neovim terminal splits nicer.
-  tnoremap <A-h> <C-\><C-N><C-w>h
-  tnoremap <A-j> <C-\><C-N><C-w>j
-  tnoremap <A-k> <C-\><C-N><C-w>k
-  tnoremap <A-l> <C-\><C-N><C-w>l
+  tnoremap <C-h> <C-\><C-N><C-w>h
+  tnoremap <C-j> <C-\><C-N><C-w>j
+  tnoremap <C-k> <C-\><C-N><C-w>k
+  tnoremap <C-l> <C-\><C-N><C-w>l
 
   " i like relative numbering when in normal mode.
   autocmd TermOpen * setlocal conceallevel=0 colorcolumn=0 relativenumber
