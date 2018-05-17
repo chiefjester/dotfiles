@@ -2,6 +2,8 @@
 source ~/packages.vim
 
 " general settings
+set wildmenu
+set path=$PWD/**
 set backspace=indent,eol,start " make vim behave like any other editors
 let mapleader=','              " set leader character
 set linespace=15               " spacing between lines
@@ -47,6 +49,7 @@ set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+ " customize shown char
 
 " ---- mappings
 " make it easy to edit vimrc file use $myvimrc as global variable
+nmap <Leader>es :w<cr>
 nmap <Leader>ev :tabedit ~/.vimrc<cr>
 
 " automatically source the vimrc file on save.
@@ -117,6 +120,14 @@ if !has('gui_running')
   set t_Co=256
 endif
 
+" moving lines
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+
 " nvim autocompletion"
 if has('nvim')
   inoremap <c-x><c-k> <c-x><c-k>
@@ -135,10 +146,10 @@ if has("nvim")
   tnoremap <Esc> <C-\><C-n>
 
   " make navigation into and out of neovim terminal splits nicer.
-  tnoremap <C-h> <C-\><C-N><C-w>h
-  tnoremap <C-j> <C-\><C-N><C-w>j
-  tnoremap <C-k> <C-\><C-N><C-w>k
-  tnoremap <C-l> <C-\><C-N><C-w>l
+  tnoremap <A-h> <C-\><C-N><C-w>h
+  tnoremap <A-j> <C-\><C-N><C-w>j
+  tnoremap <A-k> <C-\><C-N><C-w>k
+  tnoremap <A-l> <C-\><C-N><C-w>l
 
   " i like relative numbering when in normal mode.
   autocmd TermOpen * setlocal conceallevel=0 colorcolumn=0 relativenumber
