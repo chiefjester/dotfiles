@@ -29,8 +29,8 @@ set tabstop=2                  " number of visual spaces per tab
 set shiftwidth=2               " number of spaces for each step of autoindent
 set autoindent                 " auto indent on a new line
 set encoding=utf-8             " encode utf-8 by default
-setlocal foldmethod=marker     " fold method to maker, default folding of vim sucks
-setlocal foldmarker={,}        " for js, and css
+setlocal foldmethod=indent     " fold method to maker, default folding of vim sucks
+"setlocal foldmarker={,}        " for js, and css
 set foldlevel=99               " don't start window folded
 
 " search
@@ -41,7 +41,12 @@ set smartcase                  " don't ignore case when inserting uppercase char
 
 set rtp+=/usr/local/opt/fzf
 
-colorscheme PaperColor
+"colorscheme PaperColor
+colorscheme night-owl
+
+if (has("termguicolors"))
+ set termguicolors
+endif
 
 " non printable characters
 set list                                                  " show non-printable characters
@@ -57,11 +62,7 @@ autocmd BufWritePost $MYVIMRC source %
 
 " map space to nerd tree
 noremap <leader>kb :NERDTreeToggle<CR>
-let NERDTreeIgnore=['node_modules$']
-
-" move visual block up and down easily
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+let NERDTreeIgnore=['*/node_modules/*']
 
 " easyalign mappings
 nmap ga <Plug>(EasyAlign)
@@ -120,28 +121,25 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-" moving lines
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>l :Lines<CR>
 
-" nvim autocompletion"
-if has('nvim')
-  inoremap <c-x><c-k> <c-x><c-k>
-  inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-  inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" use ale to autofix javascript
+let g:ale_fixers = {
+\   'javascript': ['prettier'],
+\}
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_options = ' --pkg-conf'
 
-  imap <expr> <Plug>(expand_or_nl) (has_key(v:completed_item,'snippet')?"\<C-U>":"\<CR>")
-  imap <expr> <CR>  (pumvisible() ?  "\<c-y>\<Plug>(cm_inject_snippet)\<Plug>(expand_or_nl)" : "\<CR>")
-endif
+let g:python_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
+let g:deoplete#enable_at_startup = 1
 
 " nvim specific mappings and settings
 if has("nvim")
   set inccommand=nosplit
-
   " make escape work in the neovim terminal.
   tnoremap <Esc> <C-\><C-n>
 

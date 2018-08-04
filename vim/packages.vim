@@ -8,13 +8,25 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'Yggdroot/LeaderF'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+
+let g:deoplete#enable_at_startup = 1
 Plug 'wincent/ferret'
+Plug 'junegunn/fzf.vim'
 
 " general enhancements
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'cohama/lexima.vim'
 "Plug 'tpope/vim-vinegar'
 Plug 'justinmk/vim-sneak'
 Plug 'itchyny/lightline.vim'
@@ -27,22 +39,15 @@ Plug 'junegunn/vim-easy-align'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'chriskempson/base16-vim'
 Plug 'bling/vim-bufferline'
+Plug 'haishanh/night-owl.vim'
 
 " syntax 
 Plug 'isRuslan/vim-es6'
 Plug 'mattn/emmet-vim'
 Plug 'honza/vim-snippets'
-Plug 'prettier/vim-prettier', { 
-	\ 'do': 'yarn install', 
-	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] } 
 Plug 'scrooloose/nerdcommenter'
 Plug 'pangloss/vim-javascript'
 Plug 'w0rp/ale'
 "Plug 'sheerun/vim-polyglot'
-
-if has('nvim')
-	Plug 'roxma/nvim-completion-manager'
-	Plug 'roxma/nvim-cm-tern', {'do': 'npm install'}
-endif
 
 call plug#end()
