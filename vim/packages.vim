@@ -8,21 +8,10 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+" intellisense for vim!!!
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 
-"if has('nvim')
-  "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"else
-  "Plug 'Shougo/deoplete.nvim'
-  "Plug 'roxma/nvim-yarp'
-  "Plug 'roxma/vim-hug-neovim-rpc'
-"endif
-
-"Plug 'Shougo/neosnippet.vim'
-"Plug 'Shougo/neosnippet-snippets'
-"Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-
-let g:deoplete#enable_at_startup = 1
+" fuzzy finder / grep
 Plug 'wincent/ferret'
 Plug 'junegunn/fzf.vim'
 
@@ -30,13 +19,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-"Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'justinmk/vim-sneak'
 Plug 'itchyny/lightline.vim'
 Plug 'editorconfig/editorconfig-vim'
-"Plug 'SirVer/ultisnips'
-"Plug 'scrooloose/nerdtree'
 Plug 'junegunn/vim-easy-align'
 
 " colorschemes
@@ -46,13 +32,9 @@ Plug 'bling/vim-bufferline'
 Plug 'haishanh/night-owl.vim'
 
 " syntax 
-Plug 'isRuslan/vim-es6'
 Plug 'mattn/emmet-vim'
-Plug 'honza/vim-snippets'
+"Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdcommenter'
-Plug 'pangloss/vim-javascript'
-"Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
-"Plug 'dag/vim-fish'
 
 call plug#end()

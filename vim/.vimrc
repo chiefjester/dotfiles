@@ -97,10 +97,6 @@ nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 " netrw settings
 let g:netrw_keepdir = 0
 
-" ---- vim jsx
-"  make jsx work with normal .js files
-let g:jsx_ext_required = 0
-
 " ---- emmet
 "  make it work on html,css,javascript
 "  make Ctrl-z default mapping
@@ -123,42 +119,11 @@ nnoremap <Leader>l :Lines<CR>
 au BufNewFile,BufRead,BufReadPost *.svelte set ft=html
 
 " coc settings
-
-" use ale to autofix javascript
-"let g:ale_fixers = {
-"\   'javascript': ['prettier'],
-"\   'json': ['prettier'],
-"\   'html': ['prettier']
-"\}
-"let g:ale_fix_on_save = 1
-"let g:ale_javascript_prettier_options = ' --pkg-conf'
-
+let g:coc_global_extensions = [ 'coc-json', 'coc-snippets', 'coc-emoji', 'coc-prettier' ]
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 let g:python_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
-
-"let g:deoplete#enable_at_startup = 1
-
-" neosnippet
-" Plugin key-mappings.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-"imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-"imap <expr><TAB>
- "\ pumvisible() ? "\<C-n>" :
- "\ neosnippet#expandable_or_jumpable() ?
- "\    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-"smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-"\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-" For conceal markers.
-"if has('conceal')
-  "set conceallevel=2 concealcursor=niv
-"endif
 
 " for vim-fugitive
 " sets diff vertically instead of horizantally
