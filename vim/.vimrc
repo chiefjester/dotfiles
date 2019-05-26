@@ -31,7 +31,7 @@ set autoindent                 " auto indent on a new line
 set encoding=utf-8             " encode utf-8 by default
 setlocal foldmethod=indent     " fold method to maker, default folding of vim sucks
 "setlocal foldmarker={,}        " for js, and css
-set foldlevel=99               " don't start window folded
+set foldlevel=999               " don't start window folded
 
 " search
 set incsearch                  " search as characters are entered
@@ -40,6 +40,12 @@ set ignorecase                 " ignore case when searching lowercase
 set smartcase                  " don't ignore case when inserting uppercase characters
 
 set rtp+=/usr/local/opt/fzf
+
+" lightline configuration
+set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
 
 "colorscheme PaperColor
 colorscheme night-owl
@@ -56,6 +62,8 @@ set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+ " customize shown char
 " make it easy to edit vimrc file use $myvimrc as global variable
 nmap <Leader>es :w<cr>
 nmap <Leader>ev :tabedit ~/.vimrc<cr>
+
+noremap <Leader>z :update<cr>
 
 " automatically source the vimrc file on save.
 autocmd BufWritePost $MYVIMRC source %
@@ -86,21 +94,8 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
-" ---- ultisnips
-let g:ycm_path_to_python_interpreter    = "/usr/local/bin/python3"
-let g:UltiSnipsJumpForwardTrigger       = "<tab>"
-let g:UltiSnipsExpandTrigger            = "<Plug>(ultisnips_expand)"
-let g:UltiSnipsJumpBackwardTrigger      = "<s-tab>"
-let g:UltiSnipsRemoveSelectModeMappings = 0
-
-" optional I forgot what this do
-inoremap <silent> <c-u> <c-r>=cm#sources#ultisnips#trigger_or_popup("\<Plug>(ultisnips_expand)")<cr>
-
-" if you want :ultisnipsedit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
-" ---- honza/vim-snippets
-autocmd FileType javascript UltiSnipsAddFiletypes javascript-node javascript.es6.react
+" netrw settings
+let g:netrw_keepdir = 0
 
 " ---- vim jsx
 "  make jsx work with normal .js files
@@ -111,7 +106,7 @@ let g:jsx_ext_required = 0
 "  make Ctrl-z default mapping
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,javascript EmmetInstall
-let g:user_emmet_leader_key='<C-Z>'
+let g:user_emmet_leader_key='<C-z>'
 
 " ---- bufferline
 let g:bufferline_echo = 1
@@ -125,17 +120,59 @@ nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>l :Lines<CR>
 
+au BufNewFile,BufRead,BufReadPost *.svelte set ft=html
+
+" coc settings
+
 " use ale to autofix javascript
-let g:ale_fixers = {
-\   'javascript': ['prettier'],
-\}
-let g:ale_fix_on_save = 1
-let g:ale_javascript_prettier_options = ' --pkg-conf'
+"let g:ale_fixers = {
+"\   'javascript': ['prettier'],
+"\   'json': ['prettier'],
+"\   'html': ['prettier']
+"\}
+"let g:ale_fix_on_save = 1
+"let g:ale_javascript_prettier_options = ' --pkg-conf'
+
 
 let g:python_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
+
+" neosnippet
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+"smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+"xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+ "\ pumvisible() ? "\<C-n>" :
+ "\ neosnippet#expandable_or_jumpable() ?
+ "\    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+"smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+"\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+"if has('conceal')
+  "set conceallevel=2 concealcursor=niv
+"endif
+
+" for vim-fugitive
+" sets diff vertically instead of horizantally
+set diffopt+=vertical 
+
+" From Jovica / Mastering VIM
+" make . to work with visually selected lines
+vnoremap . :normal.<CR>”
+
+" Move visual selection
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv”
+
+" *********************
 
 " nvim specific mappings and settings
 if has("nvim")
