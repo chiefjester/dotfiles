@@ -1,6 +1,22 @@
 " Plugins
 source ~/packages.vim
 
+:set shell=/bin/bash
+
+" check what's the syntax 
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
+let g:colorizer_auto_filetype='css,html,yaml'
+
+" update buff line
+set updatetime=4000
+
 " general settings
 set wildmenu
 set path=$PWD/**
@@ -41,6 +57,8 @@ set smartcase                  " don't ignore case when inserting uppercase char
 
 set rtp+=/usr/local/opt/fzf
 
+let g:fzf_layout = { 'up': '~60%' }
+
 " lightline configuration
 set noshowmode
 let g:lightline = {
@@ -60,13 +78,28 @@ set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+ " customize shown char
 
 " ---- mappings
 " make it easy to edit vimrc file use $myvimrc as global variable
-nmap <Leader>es :w<cr>
+nmap <Leader>es :update<cr>
 nmap <Leader>ev :tabedit ~/.vimrc<cr>
 
 noremap <Leader>z :update<cr>
+noremap <Leader>q :q<cr>
+noremap <Leader>o :only<cr>
+noremap <Leader>w <C-w>
+
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
+nnoremap / /\v
+vnoremap / /\v
 
 " automatically source the vimrc file on save.
-autocmd BufWritePost $MYVIMRC source %
+"autocmd! BufWritePost $MYVIMRC source %
+augroup autosourcing
+  autocmd!
+  autocmd! bufwritepost ~/.vimrc source $MYVIMRC
+augroup end
 
 " map space to nerd tree
 noremap <leader>kb :NERDTreeToggle<CR>
@@ -112,15 +145,42 @@ if !has('gui_running')
   set t_Co=256
 endif
 
+" fzf mappings
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>l :Lines<CR>
 
+" close quicklist and location list
+noremap <Leader>c <C-w>c<CR>
+
+" close buffer
+nnoremap <silent> <C-q> :CloseBuffersMenu<CR>
+
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️ '
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'html': ['eslint']
+\}
+
+"let g:ale_fixers = {
+"\ 'javascript': ['prettier'],
+"\ 'html': ['prettier']
+"\}
+
+"let g:ale_fix_on_save = 1
+
+nnoremap <Leader>ct :ColorToggle<CR>
+vmap <leader>t <Plug>(coc-format-selected)
+nmap <leader>t <Plug>(coc-format-selected)
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
 au BufNewFile,BufRead,BufReadPost *.svelte set ft=html
 
 " coc settings
-let g:coc_global_extensions = [ 'coc-json', 'coc-snippets', 'coc-emoji', 'coc-prettier' ]
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
+let g:coc_global_extensions = [ 'coc-json', 'coc-snippets', 'coc-emoji', 'coc-css', 'coc-prettier' ]
 
 let g:python_host_prog = '/usr/local/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
@@ -137,7 +197,16 @@ vnoremap . :normal.<CR>”
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv”
 
+
+" polygot override
+"let g:polyglot_disabled = ['jsx']
+let g:jsx_ext_required = 1
+
 " *********************
+
+" goyo
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 " nvim specific mappings and settings
 if has("nvim")
