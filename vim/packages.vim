@@ -32,9 +32,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'chriskempson/base16-vim'
 Plug 'bling/vim-bufferline'
-"Plug 'haishanh/night-owl.vim'
-
-Plug '~/experiment/random-program/night-owl.vim'
+Plug 'haishanh/night-owl.vim'
 
 " syntax 
 Plug 'mattn/emmet-vim'
