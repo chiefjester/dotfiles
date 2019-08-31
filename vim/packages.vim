@@ -13,6 +13,7 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 
 " fuzzy finder / grep
 Plug 'wincent/ferret'
+Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 
 " general enhancements

@@ -81,6 +81,9 @@ set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+ " customize shown char
 nmap <Leader>es :update<cr>
 nmap <Leader>ev :tabedit ~/.vimrc<cr>
 
+" switch to alternate file
+noremap <Leader>6 <C-^>
+
 noremap <Leader>z :update<cr>
 noremap <Leader>q :q<cr>
 noremap <Leader>o :only<cr>
@@ -182,8 +185,8 @@ au BufNewFile,BufRead,BufReadPost *.svelte set ft=html
 " coc settings
 let g:coc_global_extensions = [ 'coc-json', 'coc-snippets', 'coc-emoji', 'coc-css', 'coc-prettier' ]
 
-let g:python_host_prog = '/usr/local/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python_host_prog = '/usr/bin/python'
+let g:python3_host_prog = '/usr/bin/python3'
 
 " for vim-fugitive
 " sets diff vertically instead of horizantally
