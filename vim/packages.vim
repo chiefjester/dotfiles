@@ -9,7 +9,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " intellisense for vim!!!
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 
 " fuzzy finder / grep
 Plug 'wincent/ferret'
@@ -17,6 +17,8 @@ Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 
 " general enhancements
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-user'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -38,7 +40,8 @@ Plug 'haishanh/night-owl.vim'
 " syntax 
 Plug 'mattn/emmet-vim'
 Plug 'honza/vim-snippets'
-Plug 'scrooloose/nerdcommenter'
+"Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 "Plug 'maxmellon/vim-jsx-pretty'
