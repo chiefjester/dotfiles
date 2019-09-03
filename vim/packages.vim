@@ -40,7 +40,6 @@ Plug 'haishanh/night-owl.vim'
 " syntax 
 Plug 'mattn/emmet-vim'
 Plug 'honza/vim-snippets'
-"Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-commentary'
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
