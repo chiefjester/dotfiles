@@ -1,4 +1,4 @@
-"'javascript',  install vim-plug if it is not installed
+"install vim-plug if it is not installed
 " from https://github.com/dboucken/dotfiles/blob/master/.vimrc
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
