@@ -65,8 +65,10 @@ let g:lightline = {
       \ 'colorscheme': 'one',
       \ }
 
-"colorscheme PaperColor
-colorscheme night-owl
+" colorscheme PaperColor
+" colorscheme night-owl
+" colorscheme corvine
+colorscheme dracula
 
 if (has("termguicolors"))
  set termguicolors

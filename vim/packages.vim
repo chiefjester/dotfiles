@@ -36,6 +36,8 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'chriskempson/base16-vim'
 Plug 'bling/vim-bufferline'
 Plug 'haishanh/night-owl.vim'
+Plug 'arzg/vim-corvine'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " syntax 
 Plug 'mattn/emmet-vim'
