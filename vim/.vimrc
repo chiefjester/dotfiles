@@ -161,8 +161,8 @@ noremap <Leader>c <C-w>c<CR>
 " close buffer
 nnoremap <silent> <C-q> :CloseBuffersMenu<CR>
 
-let g:ale_sign_error = '❌'
-let g:ale_sign_warning = '⚠️ '
+" let g:ale_sign_error = '❌'
+" let g:ale_sign_warning = '⚠️ '
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'html': ['eslint']
