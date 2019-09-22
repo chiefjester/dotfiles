@@ -1,11 +1,14 @@
 set -gx PATH $HOME/squashfs-root/usr/bin $PATH
 alias fd=fdfind
+alias npmdelete="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
+
+set -gx NPM_CONFIG_PREFIX "~/.npm-global"
 
 set -gx VISUAL "/usr/bin/nvim"
 set -gx EDITOR $VISUAL
 
 # use fd for fzf commands
-set -gx FZF_DEFAULT_COMMAND 'fd --hidden --exclude .npm --exclude .local --exclude .git --exclude node_modules --type f --color=never'
+set -gx FZF_DEFAULT_COMMAND 'fd -L --hidden --exclude .npm --exclude .local --exclude .git --exclude node_modules --type f --color=never'
 # set -gx FZF_DEFAULT_COMMAND 'fd --type f --color=never'
 set -gx FZF_OPEN_COMMAND $FZF_DEFAULT_COMMAND
 set -gx FZF_ALT_C_COMMAND 'fd --type d . --color=never'
