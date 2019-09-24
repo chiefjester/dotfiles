@@ -45,9 +45,11 @@ set tabstop=2                  " number of visual spaces per tab
 set shiftwidth=2               " number of spaces for each step of autoindent
 set autoindent                 " auto indent on a new line
 set encoding=utf-8             " encode utf-8 by default
-setlocal foldmethod=indent     " fold method to maker, default folding of vim sucks
+set foldmethod=indent     " fold method to maker, default folding of vim sucks
+let g:gitgutter_preview_win_floating = 0
 "setlocal foldmarker={,}        " for js, and css
 set foldlevel=999               " don't start window folded
+set updatetime=100
 
 " search
 set incsearch                  " search as characters are entered

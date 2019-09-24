@@ -30,6 +30,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'Asheq/close-buffers.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'airblade/vim-gitgutter'
 
 " colorschemes
 Plug 'NLKNguyen/papercolor-theme'
@@ -47,5 +48,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 "Plug 'maxmellon/vim-jsx-pretty'
 Plug 'chrisbra/Colorizer'
+Plug 'leafOfTree/vim-svelte-plugin'
 
 call plug#end()
