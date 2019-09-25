@@ -13,8 +13,7 @@ function! <SID>SynStack()
 endfunc
 
 let g:colorizer_auto_filetype='css,html,yaml'
-
-" update buff line
+" for vim gutter, set to 4000 otherwise
 set updatetime=4000
 
 " general settings
@@ -49,7 +48,6 @@ set foldmethod=indent     " fold method to maker, default folding of vim sucks
 let g:gitgutter_preview_win_floating = 0
 "setlocal foldmarker={,}        " for js, and css
 set foldlevel=999               " don't start window folded
-set updatetime=100
 
 " search
 set incsearch                  " search as characters are entered
