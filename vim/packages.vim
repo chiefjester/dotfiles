@@ -27,7 +27,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'itchyny/lightline.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'Asheq/close-buffers.vim'
+" Plug 'Asheq/close-buffers.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 

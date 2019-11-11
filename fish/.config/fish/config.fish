@@ -1,11 +1,14 @@
-set -gx PATH $HOME/squashfs-root/usr/bin $PATH
+set -gx PATH $HOME/bin $HOME/squashfs-root/usr/bin $HOME/.npm-global/bin /mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application $PATH
 alias fd=fdfind
 alias npmdelete="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
+alias git=hub
+alias xdg-open=wslview
 
 set -gx NPM_CONFIG_PREFIX "~/.npm-global"
 
 set -gx VISUAL "/usr/bin/nvim"
 set -gx EDITOR $VISUAL
+set -gx BROWSER wslview
 
 # use fd for fzf commands
 set -gx FZF_DEFAULT_COMMAND 'fd -L --hidden --exclude .npm --exclude .local --exclude .git --exclude node_modules --type f --color=never'
