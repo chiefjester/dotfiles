@@ -185,7 +185,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
 
-au BufNewFile,BufRead,BufReadPost *.svelte set ft=html
+" au BufNewFile,BufRead,BufReadPost *.svelte set ft=html
 
 " coc settings
 let g:coc_global_extensions = [ 'coc-json', 'coc-snippets', 'coc-emoji', 'coc-css', 'coc-prettier' ]
