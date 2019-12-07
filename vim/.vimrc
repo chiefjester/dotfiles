@@ -77,7 +77,7 @@ endif
 
 " non printable characters
 set list                                                  " show non-printable characters
-set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+ " customize shown characters
+set listchars=tab:▸\ ,trail:-,extends:>,precedes:<,nbsp:+,eol:¬ " customize shown characters
 
 " ---- mappings
 " make it easy to edit vimrc file use $myvimrc as global variable
