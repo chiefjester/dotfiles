@@ -180,6 +180,7 @@ let g:ale_linters = {
 nnoremap <Leader>ct :ColorToggle<CR>
 vmap <leader>t <Plug>(coc-format-selected)
 nmap <leader>t <Plug>(coc-format-selected)
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
