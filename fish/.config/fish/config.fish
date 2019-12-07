@@ -1,4 +1,4 @@
-set -gx PATH $HOME/bin $HOME/squashfs-root/usr/bin $HOME/.npm-global/bin /mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application $PATH
+set -gx PATH $HOME/bin $HOME/go/bin $HOME/squashfs-root/usr/bin $HOME/.npm-global/bin /mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application $PATH
 alias fd=fdfind
 alias npmdelete="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
 alias git=hub
