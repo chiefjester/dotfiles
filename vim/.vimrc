@@ -1,7 +1,7 @@
 " Plugins
 source ~/packages.vim
 
-:set shell=/bin/bash
+" :set shell=/bin/bash
 
 " check what's the syntax 
 nmap <C-S-P> :call <SID>SynStack()<CR>
