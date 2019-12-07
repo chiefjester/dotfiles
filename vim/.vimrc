@@ -197,7 +197,7 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " au BufNewFile,BufRead,BufReadPost *.svelte set ft=html
 
 " coc settings
-let g:coc_global_extensions = [ 'coc-json', 'coc-snippets', 'coc-emoji', 'coc-css', 'coc-prettier' ]
+let g:coc_global_extensions = [ 'coc-emmet', 'coc-json', 'coc-svelte', 'coc-snippets', 'coc-emoji', 'coc-css', 'coc-prettier' ]
 
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
