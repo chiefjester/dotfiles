@@ -184,6 +184,15 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
+inoremap <silent><expr> <c-space> coc#refresh()
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " au BufNewFile,BufRead,BufReadPost *.svelte set ft=html
 
