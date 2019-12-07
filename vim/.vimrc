@@ -1,9 +1,7 @@
 " Plugins
 source ~/packages.vim
 
-" :set shell=/bin/bash
-
-" check what's the syntax 
+" check what's the syntax
 nmap <C-S-P> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
   if !exists("*synstack")
@@ -194,8 +192,6 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" au BufNewFile,BufRead,BufReadPost *.svelte set ft=html
-
 " coc settings
 let g:coc_global_extensions = [ 'coc-emmet', 'coc-json', 'coc-svelte', 'coc-snippets', 'coc-emoji', 'coc-css', 'coc-prettier' ]
 
@@ -204,7 +200,7 @@ let g:python3_host_prog = '/usr/bin/python3'
 
 " for vim-fugitive
 " sets diff vertically instead of horizantally
-set diffopt+=vertical 
+set diffopt+=vertical
 
 " From Jovica / Mastering VIM
 " make . to work with visually selected lines
@@ -226,7 +222,7 @@ autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
 " make cursor blink
-set guicursor=a:ver100-iCursor   
+set guicursor=a:ver100-iCursor
 " nvim specific mappings and settings
 if has("nvim")
   set inccommand=nosplit
