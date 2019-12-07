@@ -25,7 +25,7 @@ set linespace=15               " spacing between lines
 se mouse+=a                    " enable mouse support
 set noswapfile                 " disable creation of .swap
 set hidden                     " hides buffer instead of closing them
-set clipboard=unnamed          " make os's clipboard work
+set clipboard+=unnamedplus          " make os's clipboard work
 set ic                         " set ignore case when searching
 set nocompatible               " enable vim features by opting out of vi compatibility
 syntax enable                  " enable syntax detection
