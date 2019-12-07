@@ -69,6 +69,7 @@ let g:lightline = {
 " colorscheme night-owl
 " colorscheme corvine
 colorscheme dracula
+hi Normal guibg=NONE ctermbg=NONE
 
 if (has("termguicolors"))
  set termguicolors
