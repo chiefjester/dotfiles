@@ -157,7 +157,17 @@ endif
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>l :Lines<CR>
+nnoremap <Leader>h :History<CR>
 
+" Quickly create a new terminal in a vertical split
+tnoremap <Leader>% <C-\><C-n>:vsp<CR><C-w><C-w>:term<CR>
+noremap <Leader>% :vsp<CR><C-w><C-w>:term<CR>
+inoremap <Leader>% <Esc>:vsp<CR><C-w><C-w>:term<CR>
+
+" Quickly create a new terminal in a horizontal split
+tnoremap <Leader>" <C-\><C-n>:sp<CR><C-w><C-w>:term<CR>
+noremap <Leader>" :sp<CR><C-w><C-w>:term<CR>
+inoremap <Leader>" <Esc>:sp<CR><C-w><C-w>:term<CR>
 " close quicklist and location list
 noremap <Leader>c <C-w>c<CR>
 
