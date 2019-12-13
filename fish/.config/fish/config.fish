@@ -2,6 +2,9 @@ set -gx PATH $HOME/bin $HOME/go/bin $HOME/squashfs-root/usr/bin $HOME/.npm-globa
 alias fd=fdfind
 alias npmdelete="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
 alias git=hub
+alias gs="git status"
+alias ga="git add ."
+alias gc="git commit"
 # alias xdg-open=wslview
 
 set -gx NPM_CONFIG_PREFIX "~/.npm-global"
@@ -10,6 +13,7 @@ set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0
 set -gx VISUAL "/usr/bin/nvim"
 set -gx EDITOR $VISUAL
 set -gx BROWSER wsl-open
+# set -gx TERM screen-256color
 # alias xdg-open=wslview
 
 # use fd for fzf commands
