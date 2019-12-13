@@ -238,6 +238,13 @@ autocmd! User GoyoLeave Limelight!
 
 " make cursor blink
 set guicursor=a:ver100-iCursor
+
+" multi cursors
+nmap <silent> <C-c> <Plug>(coc-cursors-position)
+nmap <silent> <C-d> <Plug>(coc-cursors-word)
+xmap <silent> <C-d> <Plug>(coc-cursors-range)
+" use normal command like `<leader>xi(`
+
 " nvim specific mappings and settings
 if has("nvim")
   set inccommand=nosplit
