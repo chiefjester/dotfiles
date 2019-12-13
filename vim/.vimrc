@@ -70,6 +70,14 @@ let g:lightline = {
 colorscheme dracula
 hi Normal guibg=NONE ctermbg=NONE
 
+command! LightlineReload call LightlineReload()
+
+function! LightlineReload()
+  call lightline#init()
+  call lightline#colorscheme()
+  call lightline#update()
+endfunction
+
 if (has("termguicolors"))
  set termguicolors
 endif
@@ -168,8 +176,6 @@ inoremap <Leader>% <Esc>:vsp<CR><C-w><C-w>:term<CR>
 tnoremap <Leader>" <C-\><C-n>:sp<CR><C-w><C-w>:term<CR>
 noremap <Leader>" :sp<CR><C-w><C-w>:term<CR>
 inoremap <Leader>" <Esc>:sp<CR><C-w><C-w>:term<CR>
-" close quicklist and location list
-noremap <Leader>c <C-w>c<CR>
 
 " close buffer
 nnoremap <silent> <C-q> :CloseBuffersMenu<CR>
