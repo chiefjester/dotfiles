@@ -99,6 +99,8 @@ noremap <C-l> <C-w>l
 nnoremap / /\v
 vnoremap / /\v
 
+noremap <C-6> <C-^>
+
 " automatically source the vimrc file on save.
 "autocmd! BufWritePost $MYVIMRC source %
 augroup autosourcing
