@@ -32,6 +32,7 @@ filetype plugin on             " turn on plugin for file type
 set bg=dark                    " use dark background color
 set laststatus=2               " always show the status line
 set expandtab                  " tab to spaces
+set wrap
 
 " line number
 set rnu                        " turn on relative numbers
