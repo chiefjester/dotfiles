@@ -12,7 +12,7 @@ endfunc
 
 let g:colorizer_auto_filetype='css,html,yaml'
 " for vim gutter, set to 4000 otherwise
-set updatetime=4000
+" set updatetime=4000
 
 " general settings
 set wildmenu
