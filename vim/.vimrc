@@ -223,6 +223,8 @@ vnoremap . :normal.<CR>”
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv”
 
+" set eslintrc to json
+au BufNewFile,BufRead,BufReadPost *.eslintrc set ft=json
 
 " polygot override
 "let g:polyglot_disabled = ['jsx']
