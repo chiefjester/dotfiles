@@ -17,8 +17,8 @@ set -gx BROWSER wsl-open
 # alias xdg-open=wslview
 
 # use fd for fzf commands
-set -gx FZF_DEFAULT_COMMAND 'fd -L --hidden --exclude .npm --exclude .cargo --exclude .cache --exclude .local --exclude .git --exclude node_modules --type f --color=never'
-# set -gx FZF_DEFAULT_COMMAND 'fd --type f --color=never'
+# set -gx FZF_DEFAULT_COMMAND 'fd -L --hidden --exclude .npm --exclude .cargo --exclude .cache --exclude .local --exclude .git --exclude node_modules --type f --color=never'
+set -gx FZF_DEFAULT_COMMAND 'fd --type f --color=never'
 set -gx FZF_OPEN_COMMAND $FZF_DEFAULT_COMMAND
 set -gx FZF_ALT_C_COMMAND 'fd --type d . --color=never'
 set -gx FZF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
