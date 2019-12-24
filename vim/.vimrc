@@ -283,4 +283,7 @@ if has("nvim")
         \   },
         \   'cache_enabled': 1,
         \ }
+" fix cursor in neovim
+if has('nvim')
+  set guicursor=
 endif
