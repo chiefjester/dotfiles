@@ -279,19 +279,8 @@ if has("nvim")
   " prefer neovim terminal insert mode to normal mode.
   autocmd BufEnter term://* startinsert
 
+endif
 
-  let g:clipboard = {
-        \   'name': 'win32yank custom',
-        \   'copy': {
-        \      '+': 'win32yank.exe -i --crlf',
-        \      '*': 'win32yank.exe -i --crlf',
-        \    },
-        \   'paste': {
-        \      '+': 'win32yank.exe -o --lf',
-        \      '*': 'win32yank.exe -o --lf',
-        \   },
-        \   'cache_enabled': 1,
-        \ }
 " fix cursor in neovim
 if has('nvim')
   set guicursor=
