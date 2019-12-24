@@ -116,6 +116,15 @@ augroup autosourcing
   autocmd! bufwritepost ~/.vimrc source $MYVIMRC
 augroup end
 
+" automake directories"
+augroup automkdir
+  autocmd!
+  autocmd BufWritePre *
+          \ if !isdirectory(expand('<afile>:h')) |
+              \ call mkdir(expand('<afile>:h'), 'p') |
+          \ endif
+augroup END
+
 " map space to nerd tree
 noremap <leader>kb :NERDTreeToggle<CR>
 let NERDTreeIgnore=['*/node_modules/*']
