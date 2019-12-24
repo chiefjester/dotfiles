@@ -31,6 +31,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-eunuch'
 
 " colorschemes
 Plug 'NLKNguyen/papercolor-theme'
