@@ -141,7 +141,7 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
-nmap <silent> ./ :nohlsearch<CR>
+nmap <silent> <leader>no :nohlsearch<CR>
 
 " netrw settings
 let g:netrw_keepdir = 0
