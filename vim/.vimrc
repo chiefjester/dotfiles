@@ -175,6 +175,7 @@ nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>l :Lines<CR>
 nnoremap <Leader>h :History<CR>
+nnoremap <Leader>rg :Rg 
 
 " Quickly create a new terminal in a vertical split
 tnoremap <Leader>% <C-\><C-n>:vsp<CR><C-w><C-w>:term<CR>
