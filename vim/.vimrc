@@ -107,7 +107,10 @@ noremap <C-l> <C-w>l
 nnoremap / /\v
 vnoremap / /\v
 
-noremap <C-6> <C-^>
+nnoremap <C-6> <C-^>
+
+" Toggle relative line numbers and regular line numbers.
+nmap <F6> :set invrelativenumber<CR>
 
 " automatically source the vimrc file on save.
 "autocmd! BufWritePost $MYVIMRC source %
