@@ -185,7 +185,8 @@ noremap <Leader>" :sp<CR><C-w><C-w>:term<CR>
 inoremap <Leader>" <Esc>:sp<CR><C-w><C-w>:term<CR>
 
 " close buffer
-nnoremap <silent> <C-q> :CloseBuffersMenu<CR>
+nnoremap <silent> \x :cclose<CR>
+nnoremap <silent> \c :copen<CR>
 
 " let g:ale_sign_error = '❌'
 " let g:ale_sign_warning = '⚠️ '
