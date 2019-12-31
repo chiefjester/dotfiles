@@ -27,6 +27,12 @@ set -gx FZF_CD_WITH_HIDDEN_COMMAND 'fd --type d . --color=never --hidden --exclu
 
 fish_ssh_agent
 
+function fish_user_key_bindings
+    for mode in insert default visual
+        bind -M $mode \cf forward-char
+    end
+end
+
 alias tt="du -hsx * | sort -rh | head -10"
 
 # The next line updates PATH for the Google Cloud SDK.
