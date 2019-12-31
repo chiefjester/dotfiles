@@ -111,9 +111,6 @@ vnoremap / /\v
 
 nnoremap <C-6> <C-^>
 
-" Toggle relative line numbers and regular line numbers.
-nmap <F6> :set invrelativenumber<CR>
-
 " automake directories"
 augroup automkdir
   autocmd!
