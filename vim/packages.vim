@@ -31,6 +31,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-unimpaired'
+Plug 'christoomey/vim-tmux-navigator'
 
 " colorschemes
 Plug 'NLKNguyen/papercolor-theme'
