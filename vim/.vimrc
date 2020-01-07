@@ -203,6 +203,9 @@ nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>l :Lines<CR>
 nnoremap <Leader>H :History<CR>
+
+nnoremap <Leader>F :call fzf#run(fzf#wrap({'source': 'fdfind -L --hidden --type f --ignore-file ~/.config/.ignore'}))<CR>
+
 " nnoremap <Leader>rg :Rg <C-R><C-W><CR>
 nnoremap <Leader>rg :Rg 
 
