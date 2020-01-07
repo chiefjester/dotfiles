@@ -32,6 +32,7 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-unimpaired'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'thaerkh/vim-workspace'
 
 " colorschemes
 Plug 'NLKNguyen/papercolor-theme'
