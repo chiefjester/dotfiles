@@ -14,6 +14,11 @@ let g:colorizer_auto_filetype='css,html,yaml'
 " for vim gutter, set to 4000 otherwise
 " set updatetime=4000
 
+" vim-workspace directory
+let g:workspace_session_directory = $HOME . '/.vim/sessions/'
+nnoremap gs :ToggleWorkspace<CR>
+let g:workspace_persist_undo_history = 0 
+let g:workspace_autosave = 0
 
 " general settings
 set wildmenu
