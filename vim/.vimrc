@@ -14,6 +14,7 @@ let g:colorizer_auto_filetype='css,html,yaml'
 " for vim gutter, set to 4000 otherwise
 " set updatetime=4000
 
+
 " general settings
 set wildmenu
 set path=$PWD/**
@@ -93,9 +94,6 @@ nmap <Leader>ev :tabedit ~/.vimrc<cr>
 " source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" switch to alternate file
-noremap <Leader>6 <C-^>
-
 noremap <Leader>z :update<cr>
 noremap <Leader>q :q<cr>
 noremap <Leader>o :only<cr>
@@ -110,6 +108,10 @@ nnoremap / /\v
 vnoremap / /\v
 
 nnoremap <C-6> <C-^>
+
+" remap split
+nnoremap ,v <C-w>v
+nnoremap ,h <C-w>s
 
 " automake directories"
 augroup automkdir
@@ -167,11 +169,35 @@ if !has('gui_running')
   set t_Co=256
 endif
 
+" general enhancements
+" alternative for multi cursors
+nnoremap cn *``cgn
+let g:mc = "y/\\V\<C-r>=escape(@\", '/')\<CR>\<CR>"
+vnoremap <expr> cn g:mc . "``cgn"
+let g:mc = "y/\\V\<C-r>=escape(@\", '/')\<CR>\<CR>"
+
+nnoremap cn *``cgn
+nnoremap cN *``cgN
+
+vnoremap <expr> cn g:mc . "``cgn"
+vnoremap <expr> cN g:mc . "``cgN"
+
+function! SetupCR()
+  nnoremap <Enter> :nnoremap <lt>Enter> n@z<CR>q:<C-u>let @z=strpart(@z,0,strlen(@z)-1)<CR>n@z
+endfunction
+
+nnoremap cq :call SetupCR()<CR>*``qz
+nnoremap cQ :call SetupCR()<CR>#``qz
+
+vnoremap <expr> cq ":\<C-u>call SetupCR()\<CR>" . "gv" . g:mc . "``qz"
+vnoremap <expr> cQ ":\<C-u>call SetupCR()\<CR>" . "gv" . substitute(g:mc, '/', '?', 'g') . "``qz"
+
 " fzf mappings
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>l :Lines<CR>
-nnoremap <Leader>h :History<CR>
+nnoremap <Leader>H :History<CR>
+" nnoremap <Leader>rg :Rg <C-R><C-W><CR>
 nnoremap <Leader>rg :Rg 
 
 " Quickly create a new terminal in a vertical split
