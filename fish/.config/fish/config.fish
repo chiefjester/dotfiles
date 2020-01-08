@@ -1,5 +1,5 @@
 set -gx PATH $HOME/bin $HOME/go/bin $HOME/squashfs-root/usr/bin $HOME/.npm-global/bin /mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application $PATH
-alias fd=fdfind
+# alias fd=fdfind
 alias npmdelete="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
 alias git=hub
 alias gs="git status"
@@ -17,7 +17,6 @@ set -gx BROWSER wsl-open
 # alias xdg-open=wslview
 
 # use fd for fzf commands
-# set -gx FZF_DEFAULT_COMMAND 'fd -L --hidden --exclude .npm --exclude .cargo --exclude .cache --exclude .local --exclude .git --exclude node_modules --type f --color=never'
 set -gx FZF_DEFAULT_COMMAND 'fd --type f --color=never'
 set -gx FZF_OPEN_COMMAND $FZF_DEFAULT_COMMAND
 set -gx FZF_ALT_C_COMMAND 'fd --type d . --color=never'
