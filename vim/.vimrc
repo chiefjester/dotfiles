@@ -106,7 +106,7 @@ set listchars=tab:▸\ ,trail:-,extends:>,precedes:<,nbsp:+,eol:¬ " customize s
 nmap <Leader>es :update<cr>
 nmap <Leader>ev :tabedit ~/.vimrc<cr>
 " source vimrc
-nnoremap <leader>sv :source $MYVIMRC<cr>
+" nnoremap <leader>ve :source $MYVIMRC<cr>
 
 noremap <Leader>z :update<cr>
 noremap <Leader>q :q<cr>
