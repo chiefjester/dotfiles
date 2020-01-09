@@ -14,6 +14,11 @@ let g:colorizer_auto_filetype='css,html,yaml'
 " for vim gutter, set to 4000 otherwise
 " set updatetime=4000
 
+if executable("rg")
+    set grepprg=rg\ --vimgrep\ --no-heading
+    set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
+
 " vim-workspace directory
 let g:workspace_session_directory = $HOME . '/.vim/sessions/'
 nnoremap gs :ToggleWorkspace<CR>
