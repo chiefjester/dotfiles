@@ -139,8 +139,13 @@ augroup END
 
 " map space to nerd tree
 noremap <leader>kb :NERDTreeToggle<CR>
+noremap <leader>kf :NERDTreeFind<CR>
 let NERDTreeIgnore=['*/node_modules/*']
-let g:NERDTreeHijackNetrw=0
+" let g:NERDTreeHijackNetrw=0
+let g:NERDTreeShowHidden=1
+let g:NERDTreeAutoDeleteBuffer=1
+let g:NERDTreeQuitOnOpen = 1
+set sessionoptions-=blank
 
 " easyalign mappings
 nmap ga <Plug>(EasyAlign)
