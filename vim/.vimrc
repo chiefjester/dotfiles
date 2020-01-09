@@ -82,6 +82,9 @@ let g:lightline = {
 colorscheme dracula
 hi Normal guibg=NONE ctermbg=NONE
 
+" hi netrwMarkFile guibg=#ff00ff ctermbg=#ff00ff 
+hi netrwMarkFile guibg=#ff00ff 
+
 command! LightlineReload call LightlineReload()
 
 function! LightlineReload()
