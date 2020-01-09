@@ -24,7 +24,6 @@ set -gx FZF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
 set -gx FZF_CD_COMMAND $FZF_ALT_C_COMMAND
 set -gx FZF_CD_WITH_HIDDEN_COMMAND 'fd --type d . --color=never --hidden --exclude .npm --exclude .git'
 
-fish_ssh_agent
 
 function fish_user_key_bindings
     for mode in insert default visual
