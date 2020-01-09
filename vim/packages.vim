@@ -12,7 +12,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 
 " fuzzy finder / grep
-Plug 'wincent/ferret'
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 
