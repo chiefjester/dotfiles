@@ -33,6 +33,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-unimpaired'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'thaerkh/vim-workspace'
+Plug 'stefandtw/quickfix-reflector.vim'
 
 " colorschemes
 Plug 'NLKNguyen/papercolor-theme'
