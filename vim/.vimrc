@@ -79,7 +79,9 @@ let g:lightline = {
 " colorscheme PaperColor
 " colorscheme night-owl
 " colorscheme corvine
-colorscheme dracula
+" colorscheme dracula
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
 hi Normal guibg=NONE ctermbg=NONE
 
 " hi netrwMarkFile guibg=#ff00ff ctermbg=#ff00ff 
@@ -136,6 +138,14 @@ augroup automkdir
               \ call mkdir(expand('<afile>:h'), 'p') |
           \ endif
 augroup END
+
+
+" automatically source the vimrc file on save.
+"autocmd! BufWritePost $MYVIMRC source %
+augroup autosourcing
+  autocmd!
+  autocmd! bufwritepost .vimrc,packages.vim source $MYVIMRC
+augroup end
 
 " map space to nerd tree
 noremap <leader>kb :NERDTreeToggle<CR>
@@ -217,6 +227,7 @@ nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>l :Lines<CR>
 nnoremap <Leader>H :History<CR>
+" nnoremap <Leader>l :ls<CR>:b<space>
 
 nnoremap <Leader>F :call fzf#run(fzf#wrap({'source': 'fd -L --hidden --type f --ignore-file ~/.config/.ignore'}))<CR>
 
@@ -332,27 +343,20 @@ endif
 if has('nvim')
   set guicursor=
 endif
-
-" floating fzf
 if has('nvim')
-  let $FZF_DEFAULT_OPTS .= ' --layout=reverse'
+  let $FZF_DEFAULT_OPTS .= ' --border --margin=0,2 --layout=reverse'
 
   function! FloatingFZF()
-    let height = &lines
-    let width = float2nr(&columns - (&columns * 2 / 10))
-    let col = float2nr((&columns - width) / 2)
-    let col_offset = &columns / 10
-    let opts = {
-          \ 'relative': 'editor',
-          \ 'row': 1,
-          \ 'col': col + col_offset,
-          \ 'width': width * 2 / 1,
-          \ 'height': height / 2,
-          \ 'style': 'minimal'
-          \ }
-    let buf = nvim_create_buf(v:false, v:true)
-    let win = nvim_open_win(buf, v:true, opts)
-    call setwinvar(win, '&winhl', 'NormalFloat:TabLine')
+    let width = float2nr(&columns * 0.9)
+    let height = float2nr(&lines * 0.6)
+    let opts = { 'relative': 'editor',
+               \ 'row': (&lines - height) / 2,
+               \ 'col': (&columns - width) / 2,
+               \ 'width': width,
+               \ 'height': height }
+
+    let win = nvim_open_win(nvim_create_buf(v:false, v:true), v:true, opts)
+    call setwinvar(win, '&winhighlight', 'NormalFloat:Normal')
   endfunction
 
   let g:fzf_layout = { 'window': 'call FloatingFZF()' }

@@ -41,6 +41,8 @@ Plug 'bling/vim-bufferline'
 Plug 'haishanh/night-owl.vim'
 Plug 'arzg/vim-corvine'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'morhetz/gruvbox'
+
 
 " syntax 
 Plug 'mattn/emmet-vim'
