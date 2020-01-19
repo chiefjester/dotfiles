@@ -219,13 +219,14 @@ vnoremap <expr> cq ":\<C-u>call SetupCR()\<CR>" . "gv" . g:mc . "``qz"
 vnoremap <expr> cQ ":\<C-u>call SetupCR()\<CR>" . "gv" . substitute(g:mc, '/', '?', 'g') . "``qz"
 
 " fzf mappings
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({ 'options': ['--layout=reverse']}), <bang>0)
+
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>l :Lines<CR>
-nnoremap <Leader>H :History<CR>
-" nnoremap <Leader>l :ls<CR>:b<space>
-
-nnoremap <Leader>F :call fzf#run(fzf#wrap({'source': 'fd -L --hidden --type f --ignore-file ~/.config/.ignore'}))<CR>
+nnoremap <Leader>H :History
+nnoremap <Leader>F :call fzf#run(fzf#wrap({'source': 'fd -L --hidden --type f --ignore-file ~/.config/.ignore', 'options': '--reverse' }))<CR><CR>
 
 " nnoremap <Leader>rg :Rg <C-R><C-W><CR>
 nnoremap <Leader>rg :Rg 
