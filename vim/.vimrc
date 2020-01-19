@@ -308,6 +308,9 @@ nmap <silent> <C-c> <Plug>(coc-cursors-position)
 
 " nvim specific mappings and settings
 if has("nvim")
+
+  " remove guicursor in neovim
+  set guicursor=
   set inccommand=nosplit
   " make escape work in the neovim terminal.
   tnoremap <Esc> <C-\><C-n>
