@@ -232,14 +232,14 @@ nnoremap <Leader>F :call fzf#run(fzf#wrap({'source': 'fd -L --hidden --type f --
 nnoremap <Leader>rg :Rg 
 
 " Quickly create a new terminal in a vertical split
-tnoremap <Leader>% <C-\><C-n>:vsp<CR><C-w><C-w>:term<CR>
-noremap <Leader>% :vsp<CR><C-w><C-w>:term<CR>
-inoremap <Leader>% <Esc>:vsp<CR><C-w><C-w>:term<CR>
+tnoremap <Leader>% <C-\><C-n>:vsp<CR><C-w><C-w>:term<CR>I
+noremap <Leader>% :vsp<CR><C-w><C-w>:term<CR>I
+inoremap <Leader>% <Esc>:vsp<CR><C-w><C-w>:term<CR>I
 
 " Quickly create a new terminal in a horizontal split
-tnoremap <Leader>" <C-\><C-n>:sp<CR><C-w><C-w>:term<CR>
-noremap <Leader>" :sp<CR><C-w><C-w>:term<CR>
-inoremap <Leader>" <Esc>:sp<CR><C-w><C-w>:term<CR>
+tnoremap <Leader>" <C-\><C-n>:sp<CR><C-w><C-w>:term<CR>I
+noremap <Leader>" :sp<CR><C-w><C-w>:term<CR>I
+inoremap <Leader>" <Esc>:sp<CR><C-w><C-w>:term<CR>I
 
 " close buffer
 nnoremap <silent> \x :cclose<CR>
