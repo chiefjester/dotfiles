@@ -141,7 +141,6 @@ augroup END
 
 
 " automatically source the vimrc file on save.
-"autocmd! BufWritePost $MYVIMRC source %
 augroup autosourcing
   autocmd!
   autocmd! bufwritepost .vimrc,packages.vim source $MYVIMRC
