@@ -285,6 +285,10 @@ let g:python3_host_prog = '/usr/bin/python3'
 " sets diff vertically instead of horizantally
 set diffopt+=vertical
 
+" mapping for 3 way merge
+nnoremap gdh :diffget //2<CR>
+nnoremap gdl :diffget //3<CR>
+
 " From Jovica / Mastering VIM
 " make . to work with visually selected lines
 vnoremap . :normal.<CR>”
