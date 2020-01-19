@@ -200,9 +200,6 @@ endif
 
 " general enhancements
 " alternative for multi cursors
-nnoremap cn *``cgn
-let g:mc = "y/\\V\<C-r>=escape(@\", '/')\<CR>\<CR>"
-vnoremap <expr> cn g:mc . "``cgn"
 let g:mc = "y/\\V\<C-r>=escape(@\", '/')\<CR>\<CR>"
 
 nnoremap cn *``cgn
