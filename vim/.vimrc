@@ -245,20 +245,6 @@ inoremap <Leader>" <Esc>:sp<CR><C-w><C-w>:term<CR>I
 nnoremap <silent> \x :cclose<CR>
 nnoremap <silent> \c :copen<CR>
 
-" let g:ale_sign_error = '❌'
-" let g:ale_sign_warning = '⚠️ '
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'html': ['eslint']
-\}
-
-"let g:ale_fixers = {
-"\ 'javascript': ['prettier'],
-"\ 'html': ['prettier']
-"\}
-
-"let g:ale_fix_on_save = 1
-
 nnoremap <Leader>ct :ColorToggle<CR>
 vmap <leader>t <Plug>(coc-format-selected)
 nmap <leader>t <Plug>(coc-format-selected)
