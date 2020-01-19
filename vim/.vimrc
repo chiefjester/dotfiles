@@ -302,8 +302,8 @@ autocmd! User GoyoLeave Limelight!
 
 " multi cursors
 nmap <silent> <C-c> <Plug>(coc-cursors-position)
-nmap <silent> <C-d> <Plug>(coc-cursors-word)
-xmap <silent> <C-d> <Plug>(coc-cursors-range)
+" nmap <silent> <C-d> <Plug>(coc-cursors-word)
+" xmap <silent> <C-d> <Plug>(coc-cursors-range)
 " use normal command like `<leader>xi(`
 
 " nvim specific mappings and settings
