@@ -1,3 +1,9 @@
 package-lock.json
+yarn.lock
+*.lock
 node_modules/
+.cargo/
+.cache/
+.local/
+.npm/
 .git/
