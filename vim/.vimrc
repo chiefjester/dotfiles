@@ -208,6 +208,7 @@ nnoremap cN *``cgN
 
 vnoremap <expr> cn g:mc . "``cgn"
 vnoremap <expr> cN g:mc . "``cgN"
+vnoremap cc c
 
 function! SetupCR()
   nnoremap <Enter> :nnoremap <lt>Enter> n@z<CR>q:<C-u>let @z=strpart(@z,0,strlen(@z)-1)<CR>n@z
