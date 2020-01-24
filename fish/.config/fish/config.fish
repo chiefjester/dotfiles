@@ -12,9 +12,10 @@ set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0
 
 set -gx VISUAL "/usr/local/bin/nvim"
 set -gx EDITOR $VISUAL
-set -gx BROWSER wslview
-# set -gx TERM screen-256color
-# alias xdg-open=wslview
+
+if type -q wslview 
+  set -gx BROWSER wslview
+end
 
 # use fd for fzf commands
 set -gx FZF_DEFAULT_COMMAND 'fd --type f --color=never'
