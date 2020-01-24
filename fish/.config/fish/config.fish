@@ -8,7 +8,15 @@ alias gc="git commit"
 # alias xdg-open=wslview
 
 set -gx NPM_CONFIG_PREFIX "~/.npm-global"
-set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0
+
+# set DISPLAY variable for WSL2
+if uname -a | grep 'microsoft' >/dev/null
+  set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0
+  # clean up tmp
+  if type -q /home/chris/bin/cleanup
+    sudo /home/chris/bin/cleanup
+  end
+end
 
 set -gx VISUAL "/usr/local/bin/nvim"
 set -gx EDITOR $VISUAL
@@ -33,7 +41,5 @@ end
 
 alias tt="du -hsx * | sort -rh | head -10"
 
-# clean up tmp
-sudo /home/chris/bin/cleanup
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/chris/google-cloud-sdk/path.fish.inc' ]; . '/home/chris/google-cloud-sdk/path.fish.inc'; end
