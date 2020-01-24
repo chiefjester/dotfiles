@@ -12,7 +12,7 @@ set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0
 
 set -gx VISUAL "/usr/local/bin/nvim"
 set -gx EDITOR $VISUAL
-set -gx BROWSER wsl-open
+set -gx BROWSER wslview
 # set -gx TERM screen-256color
 # alias xdg-open=wslview
 
