@@ -232,6 +232,7 @@ nnoremap <Leader>F :call fzf#run(fzf#wrap({'source': 'fd -L --hidden --type f --
 
 " nnoremap <Leader>rg :Rg <C-R><C-W><CR>
 nnoremap <Leader>rg :Rg 
+nnoremap <Leader>l :ls<CR>:b<space>
 
 " Quickly create a new terminal in a vertical split
 tnoremap <Leader>% <C-\><C-n>:vsp<CR><C-w><C-w>:term<CR>I
