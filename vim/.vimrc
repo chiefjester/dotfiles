@@ -182,6 +182,7 @@ nmap <silent> <leader>no :nohlsearch<CR>
 " netrw settings
 let g:netrw_keepdir = 1
 let g:netrw_fastbrowse=0
+let g:netrw_liststyle=3
 
 " ---- emmet
 "  make it work on html,css,javascript
