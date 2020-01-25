@@ -9,6 +9,11 @@ alias gc="git commit"
 
 set -gx NPM_CONFIG_PREFIX "~/.npm-global"
 
+# set-up gpg
+if type -q gpg 
+  set -x GPG_TTY (tty)
+end
+
 # set DISPLAY variable for WSL2
 if uname -a | grep 'microsoft' >/dev/null
   set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0
