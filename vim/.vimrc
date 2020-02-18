@@ -28,7 +28,9 @@ let g:workspace_autosave = 0
 " general settings
 set wildmenu
 set path=$PWD/**
+set path+=$PWD/.github/**
 set wildignore+=**/node_modules/** " remove node_modules from find
+set wildignore+=**/.git/** " remove node_modules from find
 set backspace=indent,eol,start     " make vim behave like any other editors
 let mapleader=','                  " set leader character
 set linespace=15                   " spacing between lines
