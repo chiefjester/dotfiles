@@ -48,3 +48,7 @@ alias tt="du -hsx * | sort -rh | head -10"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/chris/google-cloud-sdk/path.fish.inc' ]; . '/home/chris/google-cloud-sdk/path.fish.inc'; end
+
+# fnm
+set PATH /home/chris/.fnm $PATH
+fnm env --multi | source
