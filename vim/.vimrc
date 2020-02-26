@@ -1,6 +1,8 @@
 " Plugins
 source ~/packages.vim
 
+highlight Comment cterm=italic
+
 " check what's the syntax
 nmap <C-S-P> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
