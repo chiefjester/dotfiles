@@ -54,7 +54,3 @@ if [ -f '/home/chris/google-cloud-sdk/path.fish.inc' ]; . '/home/chris/google-cl
 # fnm
 set PATH /home/chris/.fnm $PATH
 fnm env --multi | source
-
-# fnm
-set PATH /home/chris/.fnm $PATH
-fnm env --multi | source
