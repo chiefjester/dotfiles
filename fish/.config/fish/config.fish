@@ -6,6 +6,8 @@ alias gs="git status"
 alias ga="git add ."
 alias gc="git commit"
 # alias xdg-open=wslview
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 
 set -gx NPM_CONFIG_PREFIX "~/.npm-global"
 
