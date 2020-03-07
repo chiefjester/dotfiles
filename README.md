@@ -19,5 +19,5 @@ GNU Stow is a symlink manager. I realized instead of just using installers made 
 For MacOS
 1. `brew install stow`
 
-For Debian/Ubuntu
+For Debian/Ubuntu/Pop OS
 1. `sudo apt install stow`
