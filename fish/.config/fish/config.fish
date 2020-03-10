@@ -25,7 +25,7 @@ if uname -a | grep 'microsoft' >/dev/null
   end
 end
 
-set -gx VISUAL "/home/chris/bin/nvim"
+set -gx VISUAL "/home/chris/bin/nvim.appimage"
 set -gx EDITOR $VISUAL
 
 if type -q wslview 
