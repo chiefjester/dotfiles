@@ -144,7 +144,6 @@ noremap <Leader>q :q<cr>
 noremap <Leader>a :qa<cr>
 noremap <Leader>o :only<cr>
 noremap <Leader>w <C-w>
-noremap <A-6> <C-^>
 
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
