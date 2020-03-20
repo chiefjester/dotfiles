@@ -153,8 +153,6 @@ noremap <C-l> <C-w>l
 nnoremap / /\v
 vnoremap / /\v
 
-nnoremap <C-6> <C-^>
-
 " remap split
 nnoremap ,v <C-w>v
 nnoremap ,h <C-w>s
