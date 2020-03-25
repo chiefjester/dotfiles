@@ -11,6 +11,7 @@ alias pbpaste='xclip -selection clipboard -o'
 
 set -gx NPM_CONFIG_PREFIX "~/.npm-global"
 
+# GDK scale for X11 applications
 set -gx GDK_SCALE 2
 # set -gx GDK_DPI_SCALE 2
 set -gx QT_SCALE_FACTOR 2
