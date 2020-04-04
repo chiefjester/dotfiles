@@ -51,8 +51,8 @@ set expandtab                      " tab to spaces
 set wrap
 
 
-set laststatus=2                                      " always show statusline
-set statusline=                                       " clear statusline
+set laststatus=2                                                                         " always show statusline
+set statusline=                                                                          " clear statusline
 set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
 set statusline+=%#DiffChange#%{(mode()=='i')?'\ \ INSERT\ ':''}
 set statusline+=%#DiffDelete#%{(mode()=='r')?'\ \ RPLACE\ ':''}
