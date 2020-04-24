@@ -8,6 +8,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
 " intellisense for vim!!!
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 
