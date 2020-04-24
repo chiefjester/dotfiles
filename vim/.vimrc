@@ -139,6 +139,7 @@ nmap <Leader>ev :tabedit ~/.vimrc<cr>
 " source vimrc
 " nnoremap <leader>ve :source $MYVIMRC<cr>
 
+noremap <Leader>f :Files<cr>
 noremap <Leader>z :update<cr>
 noremap <Leader>q :q<cr>
 noremap <Leader>a :qa<cr>
