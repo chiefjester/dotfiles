@@ -69,6 +69,14 @@ function fish_user_key_bindings
     end
 end
 
+function ...
+     cd ../..
+end
+
+function ....
+     cd ../../..
+end
+
 alias tt="du -hsx * | sort -rh | head -10"
 
 # The next line updates PATH for the Google Cloud SDK.
