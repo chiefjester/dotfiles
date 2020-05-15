@@ -178,10 +178,15 @@ augroup end
 noremap <leader>kb :NERDTreeToggle<CR>
 noremap <leader>kf :NERDTreeFind<CR>
 let NERDTreeIgnore=['*/node_modules/*']
-" let g:NERDTreeHijackNetrw=0
+let g:NERDTreeHijackNetrw=0
 let g:NERDTreeShowHidden=1
 let g:NERDTreeAutoDeleteBuffer=1
 let g:NERDTreeQuitOnOpen = 1
+" let g:netrw_rmf_cmd = 'ssh HOSTNAME rm -rf'
+"
+"
+let g:netrw_rm_cmd='ssh HOSTNAME rm -rf'
+let g:netrw_rmdir_cmd='ssh HOSTNAME rm -rf'
 set sessionoptions-=blank
 
 " easyalign mappings
@@ -302,9 +307,9 @@ nnoremap gdl :diffget //3<CR>
 " make . to work with visually selected lines
 vnoremap . :normal.<CR>”
 
-" Move visual selection
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv”
+" " Move visual selection
+" vnoremap J :m '>+1<CR>gv=gv
+" vnoremap K :m '<-2<CR>gv=gv”
 
 " set eslintrc to json
 au BufNewFile,BufRead,BufReadPost *.eslintrc set ft=json
