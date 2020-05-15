@@ -271,6 +271,9 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gr <Plug>(coc-references)
+
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " inoremap <silent><expr> <TAB>
