@@ -4,6 +4,7 @@ alias npmdelete="find . -name 'node_modules' -type d -prune -print -exec rm -rf 
 alias gs="git status"
 alias ga="git add ."
 alias gc="git commit"
+alias tmux="tmux -2"
 # alias xdg-open=wslview
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
@@ -73,4 +74,4 @@ alias tt="du -hsx * | sort -rh | head -10"
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/chris/google-cloud-sdk/path.fish.inc' ]; . '/home/chris/google-cloud-sdk/path.fish.inc'; end
 set -gx VOLTA_HOME "/home/chris/.volta"
-string match -r ".volta" "$PATH" > /dev/null; or set -gx PATH "$VOLTA_HOME/bin" $PATH
+set -gx PATH "$VOLTA_HOME/bin" $PATH
