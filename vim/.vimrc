@@ -32,68 +32,68 @@ set wildmenu
 set path=$PWD/**
 set path+=$PWD/.github/**
 set wildignore+=**/node_modules/** " remove node_modules from find
-set wildignore+=**/.git/**				 " remove node_modules from find
-set backspace=indent,eol,start		 " make vim behave like any other editors
-let mapleader=','									 " set leader character
-set linespace=15									 " spacing between lines
-se mouse+=a												 " enable mouse support
-set noswapfile										 " disable creation of .swap
-set hidden												 " hides buffer instead of closing them
-set clipboard+=unnamedplus				 " make os's clipboard work
-set ic														 " set ignore case when searching
-set nocompatible									 " enable vim features by opting out of vi compatibility
-syntax enable											 " enable syntax detection
-filetype indent on								 " add indent on file type
-filetype plugin on								 " turn on plugin for file type
-set bg=dark												 " use dark background color
-set laststatus=2									 " always show the status line
-set expandtab											 " tab to spaces
+set wildignore+=**/.git/**         " remove node_modules from find
+set backspace=indent,eol,start     " make vim behave like any other editors
+let mapleader=','                  " set leader character
+set linespace=15                   " spacing between lines
+se mouse+=a                        " enable mouse support
+set noswapfile                     " disable creation of .swap
+set hidden                         " hides buffer instead of closing them
+set clipboard+=unnamedplus         " make os's clipboard work
+set ic                             " set ignore case when searching
+set nocompatible                   " enable vim features by opting out of vi compatibility
+syntax enable                      " enable syntax detection
+filetype indent on                 " add indent on file type
+filetype plugin on                 " turn on plugin for file type
+set bg=dark                        " use dark background color
+set laststatus=2                   " always show the status line
+set expandtab                      " tab to spaces
 set wrap
 
 
-set laststatus=2																																				 " always show statusline
-set statusline=																																					 " clear statusline
+set laststatus=2                                                                         " always show statusline
+set statusline=                                                                          " clear statusline
 set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
 set statusline+=%#DiffChange#%{(mode()=='i')?'\ \ INSERT\ ':''}
 set statusline+=%#DiffDelete#%{(mode()=='r')?'\ \ RPLACE\ ':''}
 set statusline+=%#DiffAdd#%{(mode()=='v')?'\ \ VISUAL\ ':''}
 set statusline+=%#DiffChange#%{(mode()=='c')?'\ \ COMMAND\ ':''}
-set statusline+=%#DiffChange#\ %n\																											 " buffer number
-set statusline+=%#Folded#																																 " colour
-set statusline+=%l																																			 " current line number
-set statusline+=/%L																																			 " total lines
-set statusline+=(%p%%)																																	 " percentage through the file
-set statusline+=%4c																																			 " cursor column
-set statusline+=\|%-4{strwidth(getline('.'))}																						 " line length
+set statusline+=%#DiffChange#\ %n\                                                       " buffer number
+set statusline+=%#Folded#                                                                " colour
+set statusline+=%l                                                                       " current line number
+set statusline+=/%L                                                                      " total lines
+set statusline+=(%p%%)                                                                   " percentage through the file
+set statusline+=%4c                                                                      " cursor column
+set statusline+=\|%-4{strwidth(getline('.'))}                                            " line length
 set statusline+=%{&buftype!='terminal'?expand('%:p:h:t').'\\'.expand('%:t'):expand('%')} " dir\filename.ext
-set statusline+=%m																																			 " modified flag
-set statusline+=%r																																			 " read only flag
-set statusline+=%=																																			 " left/right separator
-set statusline+=\ \|\ %{getcwd()}																												 " current working directory
-set statusline+=\ [%{strlen(&ft)?(&ft\ .\ \',\'):''}																		 " filetype
-set statusline+=%{strlen(&fenc)?(&fenc\ .\ \',\'):''}																		 " file encoding
-set statusline+=%{&ff}]																																	 " line endings
-set statusline+=%<																																			 " start to truncate here
+set statusline+=%m                                                                       " modified flag
+set statusline+=%r                                                                       " read only flag
+set statusline+=%=                                                                       " left/right separator
+set statusline+=\ \|\ %{getcwd()}                                                        " current working directory
+set statusline+=\ [%{strlen(&ft)?(&ft\ .\ \',\'):''}                                     " filetype
+set statusline+=%{strlen(&fenc)?(&fenc\ .\ \',\'):''}                                    " file encoding
+set statusline+=%{&ff}]                                                                  " line endings
+set statusline+=%<                                                                       " start to truncate here
 
-" line number
-set rnu												 " turn on relative numbers
-set number										 " set current line number
+                                                                                         " line number
+set rnu                                                                                  " turn on relative numbers
+set number                                                                               " set current line number
 
 " default tabs and indentation
-set tabstop=2														 " number of visual spaces per tab
-set shiftwidth=2												 " number of spaces for each step of autoindent
-set autoindent													 " auto indent on a new line
-set encoding=utf-8											 " encode utf-8 by default
-set foldmethod=indent										 " fold method to maker, default folding of vim sucks
+set tabstop=2                            " number of visual spaces per tab
+set shiftwidth=2                         " number of spaces for each step of autoindent
+set autoindent                           " auto indent on a new line
+set encoding=utf-8                       " encode utf-8 by default
+set foldmethod=indent                    " fold method to maker, default folding of vim sucks
 let g:gitgutter_preview_win_floating = 0 " setlocal foldmarker={,}				" for js, and css
-set foldlevel=999												 " don't start window folded
-set noexpandtab													 " use tabs, not spaces
+set foldlevel=999                        " don't start window folded
+set noexpandtab                          " use tabs, not spaces
 
-" search
-set incsearch									 " search as characters are entered
-set hlsearch									 " highlight matches
-set ignorecase								 " ignore case when searching lowercase
-set smartcase									 " don't ignore case when inserting uppercase characters
+                                         " search
+set incsearch                            " search as characters are entered
+set hlsearch                             " highlight matches
+set ignorecase                           " ignore case when searching lowercase
+set smartcase                            " don't ignore case when inserting uppercase characters
 
 set rtp+=/usr/local/opt/fzf
 
@@ -130,7 +130,7 @@ if (has("termguicolors"))
 endif
 
 " non printable characters
-set list																									" show non-printable characters
+set list                                                        " show non-printable characters
 set listchars=tab:▸\ ,trail:-,extends:>,precedes:<,nbsp:+,eol:¬ " customize shown characters
 
 " ---- mappings
@@ -163,9 +163,9 @@ nnoremap ,h <C-w>s
 augroup automkdir
 	autocmd!
 	autocmd BufWritePre *
-					\ if !isdirectory(expand('<afile>:h')) |
-							\ call mkdir(expand('<afile>:h'), 'p') |
-					\ endif
+		\ if !isdirectory(expand('<afile>:h')) |
+				\ call mkdir(expand('<afile>:h'), 'p') |
+		\ endif
 augroup END
 
 
@@ -200,15 +200,15 @@ let g:easy_align_ignore_groups = []
 " custom function to strip spaces ~ from Drew Neil
 " strip white spaces
 function! <SID>StripTrailingWhitespaces()
-		" Preparation: save last search, and cursor position.
-		let _s=@/
-		let l = line(".")
-		let c = col(".")
-		" Do the business:
-		%s/\s\+$//e
-		" Clean up: restore previous search history, and cursor position
-		let @/=_s
-		call cursor(l, c)
+	" Preparation: save last search, and cursor position.
+	let _s=@/
+	let l = line(".")
+	let c = col(".")
+	" Do the business:
+	%s/\s\+$//e
+	" Clean up: restore previous search history, and cursor position
+	let @/=_s
+	call cursor(l, c)
 endfunction
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 nmap <silent> <leader>no :nohlsearch<CR>
@@ -283,9 +283,9 @@ nmap <leader>gr <Plug>(coc-references)
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " inoremap <silent><expr> <TAB>
-"				\ pumvisible() ? "\<C-n>" :
-"				\ <SID>check_back_space() ? "\<TAB>" :
-"				\ coc#refresh()
+" 	\ pumvisible() ? "\<C-n>" :
+" 	\ <SID>check_back_space() ? "\<TAB>" :
+" 	\ coc#refresh()
 " inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
