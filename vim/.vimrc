@@ -144,6 +144,7 @@ noremap <Leader>f :Files<cr>
 noremap <Leader>z :update<cr>
 noremap <Leader>q :q<cr>
 noremap <Leader>a :qa<cr>
+noremap <Leader>aa :qa!<cr>
 noremap <Leader>o :only<cr>
 noremap <Leader>w <C-w>
 
