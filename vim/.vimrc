@@ -322,8 +322,6 @@ let g:jsx_ext_required = 1
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
-" make cursor blink
-" set guicursor=a:ver100-iCursor
 
 " multi cursors
 nmap <silent> <C-c> <Plug>(coc-cursors-position)
