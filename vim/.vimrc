@@ -137,8 +137,6 @@ set listchars=tab:▸\ ,trail:-,extends:>,precedes:<,nbsp:+,eol:¬ " customize s
 " make it easy to edit vimrc file use $myvimrc as global variable
 nmap <Leader>es :update<cr>
 nmap <Leader>ev :tabedit ~/.vimrc<cr>
-" source vimrc
-" nnoremap <leader>ve :source $MYVIMRC<cr>
 
 noremap <Leader>f :Files<cr>
 noremap <Leader>z :update<cr>
