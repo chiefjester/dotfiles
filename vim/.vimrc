@@ -234,6 +234,7 @@ endif
 
 " general enhancements
 " alternative for multi cursors
+" thanks Kevin, taken from: http://www.kevinli.co/posts/2017-01-19-multiple-cursors-in-500-bytes-of-vimscript/
 let g:mc = "y/\\V\<C-r>=escape(@\", '/')\<CR>\<CR>"
 
 nnoremap cn *``cgn
