@@ -57,7 +57,8 @@ if type -q wslview
 end
 
 # use fd for fzf commands
-set -gx FZF_DEFAULT_COMMAND 'fd --type f --color=never --hidden --exclude ".git"'
+# set -gx FZF_DEFAULT_COMMAND 'fd --type f --color=never --hidden --exclude ".git"'
+set -gx FZF_DEFAULT_COMMAND 'rg --hidden --files'
 set -gx FZF_OPEN_COMMAND $FZF_DEFAULT_COMMAND
 set -gx FZF_ALT_C_COMMAND 'fd --type d . --color=never'
 set -gx FZF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
