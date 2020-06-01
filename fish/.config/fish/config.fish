@@ -83,5 +83,5 @@ alias tt="du -hsx * | sort -rh | head -10"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/chris/google-cloud-sdk/path.fish.inc' ]; . '/home/chris/google-cloud-sdk/path.fish.inc'; end
-set -gx VOLTA_HOME "/home/chris/.volta"
+set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
