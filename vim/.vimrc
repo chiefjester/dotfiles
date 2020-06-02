@@ -1,5 +1,5 @@
 " Plugins
-source ~/packages.vim
+source ~/.vim/packages.vim
 
 highlight Comment cterm=italic
 
