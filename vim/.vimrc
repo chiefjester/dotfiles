@@ -118,11 +118,11 @@ let g:lightline = {
 " colorscheme PaperColor
 " colorscheme night-owl
 " colorscheme corvine
-colorscheme dracula
-" colorscheme gruvbox
 " let g:gruvbox_contrast_dark = 'hard'
 " hi Normal guibg=282A36 ctermbg=282A36
 " hi Normal guibg=NONE ctermbg=NONE
+" colorscheme dracula
+colorscheme gruvbox
 
 " hi netrwMarkFile guibg=#ff00ff ctermbg=#ff00ff
 hi netrwMarkFile guibg=#ff00ff
