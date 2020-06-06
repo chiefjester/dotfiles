@@ -1,5 +1,6 @@
 " Plugins
 source ~/.vim_includes/packages.vim
+source ~/.vim_includes/coc.vim
 
 highlight Comment cterm=italic
 
@@ -314,31 +315,6 @@ nnoremap <silent> \x :cclose<CR>
 nnoremap <silent> \c :copen<CR>
 
 nnoremap <Leader>ct :ColorToggle<CR>
-vmap <leader>t <Plug>(coc-format-selected)
-nmap <leader>t <Plug>(coc-format-selected)
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gr <Plug>(coc-references)
-
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-" Map function and class text objects
-" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-inoremap <silent><expr> <c-space> coc#refresh()
-
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" coc settings
-let g:coc_global_extensions = [ 'coc-emmet', 'coc-json', 'coc-svelte', 'coc-snippets', 'coc-emoji', 'coc-css', 'coc-prettier' ]
 
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
