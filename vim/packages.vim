@@ -33,6 +33,8 @@ Plug 'stefandtw/quickfix-reflector.vim'
 
 " colorschemes
 Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox' 
 
 " syntax 
 Plug 'mattn/emmet-vim'
