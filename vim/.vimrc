@@ -118,9 +118,6 @@ let g:lightline = {
 " colorscheme PaperColor
 " colorscheme night-owl
 " colorscheme corvine
-" let g:gruvbox_contrast_dark = 'hard'
-" hi Normal guibg=282A36 ctermbg=282A36
-" hi Normal guibg=NONE ctermbg=NONE
 " colorscheme dracula
 colorscheme gruvbox
 
