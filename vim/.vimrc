@@ -140,38 +140,6 @@ set rtp+=/usr/local/opt/fzf
 
 let g:fzf_layout = { 'up': '~60%' }
 
-" lightline configuration
-set noshowmode
-let g:lightline = {
-      \ 'colorscheme': 'one',
-      \ }
-
-" colorscheme PaperColor
-" colorscheme night-owl
-" colorscheme corvine
-" colorscheme dracula
-colorscheme gruvbox
-let g:gruvbox_italicize_comments = '1'
-let g:gruvbox_contrast_dark = 'soft'
-"
-" hi Normal guibg=1d2021 ctermbg=1d2021
-hi Normal guibg=NONE ctermbg=NONE
-hi SignColumn guibg=NONE
-
-" hi netrwMarkFile guibg=#ff00ff ctermbg=#ff00ff
-hi netrwMarkFile guibg=#ff00ff
-
-command! LightlineReload call LightlineReload()
-
-function! LightlineReload()
-  call lightline#init()
-  call lightline#colorscheme()
-  call lightline#update()
-endfunction
-
-if (has("termguicolors"))
-  set termguicolors
-endif
 
 " non printable characters
 set list                                                        " show non-printable characters
