@@ -234,7 +234,7 @@ let g:netrw_liststyle=0
 "  make Ctrl-z default mapping
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,javascript EmmetInstall
-let g:user_emmet_leader_key='<C-z>'
+" let g:user_emmet_leader_key='<C-z>'
 
 " ---- bufferline
 let g:bufferline_echo = 1
