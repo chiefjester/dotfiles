@@ -269,9 +269,9 @@ vnoremap <expr> cQ ":\<C-u>call SetupCR()\<CR>" . "gv" . substitute(g:mc, '/', '
 nnoremap <Leader>l :ls<CR>:b<space>
 
 " Quickly create a new terminal in a vertical split
-tnoremap <Leader>% <C-\><C-n>:vsp<CR><C-w><C-w>:term<CR>I
-noremap <Leader>% :vsp<CR><C-w><C-w>:term<CR>I
-inoremap <Leader>% <Esc>:vsp<CR><C-w><C-w>:term<CR>I
+tnoremap <Leader>5 <C-\><C-n>:vsp<CR><C-w><C-w>:term<CR>I
+noremap <Leader>5 :vsp<CR><C-w><C-w>:term<CR>I
+inoremap <Leader>5 <Esc>:vsp<CR><C-w><C-w>:term<CR>I
 
 " Quickly create a new terminal in a horizontal split
 tnoremap <Leader>" <C-\><C-n>:sp<CR><C-w><C-w>:term<CR>I
