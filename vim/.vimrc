@@ -274,9 +274,9 @@ noremap <Leader>5 :vsp<CR><C-w><C-w>:term<CR>I
 inoremap <Leader>5 <Esc>:vsp<CR><C-w><C-w>:term<CR>I
 
 " Quickly create a new terminal in a horizontal split
-tnoremap <Leader>" <C-\><C-n>:sp<CR><C-w><C-w>:term<CR>I
-noremap <Leader>" :sp<CR><C-w><C-w>:term<CR>I
-inoremap <Leader>" <Esc>:sp<CR><C-w><C-w>:term<CR>I
+tnoremap <Leader>6 <C-\><C-n>:sp<CR><C-w><C-w>:term<CR>I
+noremap <Leader>6 :sp<CR><C-w><C-w>:term<CR>I
+inoremap <Leader>6 <Esc>:sp<CR><C-w><C-w>:term<CR>I
 
 " close buffer
 nnoremap <silent> \x :cclose<CR>
