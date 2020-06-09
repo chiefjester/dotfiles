@@ -1,6 +1,7 @@
 " Plugins
 source ~/.vim_includes/packages.vim
 source ~/.vim_includes/coc.vim
+source ~/.vim_includes/functions.vim
 
 highlight Comment cterm=italic
 
