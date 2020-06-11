@@ -19,6 +19,7 @@ let g:colorizer_auto_filetype='css,html,yaml'
 if executable("rg")
   set grepprg=rg\ --vimgrep\ --no-heading
   set grepformat=%f:%l:%c:%m,%f:%l:%m
+  " let g:zettel_fzf_command = "rg --column --line-number --ignore-case --no-heading --color=always "
 endif
 
 " vim-workspace directory
