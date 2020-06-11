@@ -6,10 +6,10 @@ highlight Comment cterm=italic
 " check what's the syntax
 nmap <C-S-P> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
-	if !exists("*synstack")
-		return
-	endif
-	echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
 let g:colorizer_auto_filetype='css,html,yaml'
