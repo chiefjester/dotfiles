@@ -17,8 +17,8 @@ let g:colorizer_auto_filetype='css,html,yaml'
 " set updatetime=4000
 
 if executable("rg")
-		set grepprg=rg\ --vimgrep\ --no-heading
-		set grepformat=%f:%l:%c:%m,%f:%l:%m
+  set grepprg=rg\ --vimgrep\ --no-heading
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
 " vim-workspace directory
