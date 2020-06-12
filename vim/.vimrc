@@ -59,6 +59,8 @@ nmap <Leader>rl <Plug>VimwikiRemoveSingleCB
 vmap <Leader>rl <Plug>VimwikiRemoveSingleCB
 nmap <c-space> <nul>
 
+let g:vimwiki_folding='list'
+
 set laststatus=2                                                                         " always show statusline
 set statusline=                                                                          " clear statusline
 set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
