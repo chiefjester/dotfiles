@@ -61,6 +61,22 @@ nmap <c-space> <nul>
 
 let g:vimwiki_folding='list'
 
+" let g:vimwiki_list = [ {'path': '~/personal-wiki/',
+"                        \ 'syntax': 'markdown', 'ext': '.md'}]
+
+
+let personal = {}
+let personal.path = '~/wiki/personal/'
+" let personal.syntax = 'markdown'
+" let personal.ext = '.md'
+
+let work = {}
+let work.path = '~/wiki/work/'
+" let work.syntax = 'markdown'
+" let work.ext = '.md'
+
+let g:vimwiki_list = [personal, work]
+
 set laststatus=2                                                                         " always show statusline
 set statusline=                                                                          " clear statusline
 set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
