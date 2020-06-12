@@ -50,6 +50,13 @@ set bg=dark                        " use dark background color
 set laststatus=2                   " always show the status line
 set wrap
 
+" " vimwiki folding settings
+" let g:vimwiki_folding='list'
+" nnoremap <leader>gg <Plug>VimwikiToggleListItem
+nmap <Leader>tl <Plug>VimwikiToggleListItem
+vmap <Leader>tl <Plug>VimwikiToggleListItem
+nmap <Leader>rl <Plug>VimwikiRemoveSingleCB
+vmap <Leader>rl <Plug>VimwikiRemoveSingleCB
 
 set laststatus=2                                                                         " always show statusline
 set statusline=                                                                          " clear statusline
