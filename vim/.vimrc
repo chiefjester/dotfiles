@@ -57,6 +57,7 @@ nmap <Leader>tl <Plug>VimwikiToggleListItem
 vmap <Leader>tl <Plug>VimwikiToggleListItem
 nmap <Leader>rl <Plug>VimwikiRemoveSingleCB
 vmap <Leader>rl <Plug>VimwikiRemoveSingleCB
+nmap <c-space> <nul>
 
 set laststatus=2                                                                         " always show statusline
 set statusline=                                                                          " clear statusline
