@@ -155,6 +155,7 @@ let g:gruvbox_contrast_dark = 'soft'
 "
 " hi Normal guibg=1d2021 ctermbg=1d2021
 hi Normal guibg=NONE ctermbg=NONE
+hi SignColumn guibg=NONE
 
 " hi netrwMarkFile guibg=#ff00ff ctermbg=#ff00ff
 hi netrwMarkFile guibg=#ff00ff
