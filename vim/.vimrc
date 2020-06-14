@@ -101,11 +101,11 @@ set statusline+=%{strlen(&fenc)?(&fenc\ .\ \',\'):''}                           
 set statusline+=%{&ff}]                                                                  " line endings
 set statusline+=%<                                                                       " start to truncate here
 
-                                                                                         " line number
+" line number
 set rnu                                                                                  " turn on relative numbers
 set number                                                                               " set current line number
 
-                                         " default tabs and indentation
+" default tabs and indentation
 set tabstop=2                            " number of visual spaces per tab
 set shiftwidth=2                         " number of spaces for each step of autoindent
 set autoindent                           " auto indent on a new line
@@ -115,8 +115,7 @@ let g:gitgutter_preview_win_floating = 0 " setlocal foldmarker={,}				" for js, 
 set foldlevel=999                        " don't start window folded
 " set noexpandtab                          " use tabs, not spaces
 set expandtab                            " tab to spaces
-
-                                         " search
+" search
 set incsearch                            " search as characters are entered
 set hlsearch                             " highlight matches
 set ignorecase                           " ignore case when searching lowercase
