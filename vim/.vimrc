@@ -121,6 +121,10 @@ set hlsearch                             " highlight matches
 set ignorecase                           " ignore case when searching lowercase
 set smartcase                            " don't ignore case when inserting uppercase characters
 
+augroup vimwikiFoldLevel
+  autocmd!
+  autocmd BufEnter *.wiki set foldlevel=1
+augroup end
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
