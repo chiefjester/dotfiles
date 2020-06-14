@@ -142,8 +142,8 @@ let g:fzf_layout = { 'up': '~60%' }
 " lightline configuration
 set noshowmode
 let g:lightline = {
-			\ 'colorscheme': 'one',
-			\ }
+      \ 'colorscheme': 'one',
+      \ }
 
 " colorscheme PaperColor
 " colorscheme night-owl
