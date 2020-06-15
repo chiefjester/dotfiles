@@ -65,8 +65,8 @@ let g:vimwiki_folding='list'
 "                        \ 'syntax': 'markdown', 'ext': '.md'}]
 
 
-let personal = {}
-let personal.path = '~/wiki/personal/'
+" let personal = {}
+" let personal.path = '~/wiki/personal/'
 " let personal.syntax = 'markdown'
 " let personal.ext = '.md'
 
@@ -75,7 +75,7 @@ let work.path = '~/wiki/work/'
 " let work.syntax = 'markdown'
 " let work.ext = '.md'
 
-let g:vimwiki_list = [personal, work]
+let g:vimwiki_list = [work]
 
 set laststatus=2                                                                         " always show statusline
 set statusline=                                                                          " clear statusline
