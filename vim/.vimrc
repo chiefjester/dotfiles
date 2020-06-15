@@ -72,8 +72,8 @@ let g:vimwiki_folding='list'
 
 let work = {}
 let work.path = '~/wiki/work/'
-" let work.syntax = 'markdown'
-" let work.ext = '.md'
+let work.syntax = 'markdown'
+let work.ext = '.md'
 
 let g:vimwiki_list = [work]
 
