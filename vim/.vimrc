@@ -169,7 +169,7 @@ function! LightlineReload()
 endfunction
 
 if (has("termguicolors"))
- set termguicolors
+  set termguicolors
 endif
 
 " non printable characters
@@ -203,11 +203,11 @@ nnoremap ,h <C-w>s
 
 " automake directories"
 augroup automkdir
-	autocmd!
-	autocmd BufWritePre *
-		\ if !isdirectory(expand('<afile>:h')) |
-				\ call mkdir(expand('<afile>:h'), 'p') |
-		\ endif
+  autocmd!
+  autocmd BufWritePre *
+        \ if !isdirectory(expand('<afile>:h')) |
+        \ call mkdir(expand('<afile>:h'), 'p') |
+        \ endif
 augroup END
 
 
