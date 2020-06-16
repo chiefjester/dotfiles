@@ -213,8 +213,8 @@ augroup END
 
 " automatically source the vimrc file on save.
 augroup autosourcing
-	autocmd!
-	autocmd! bufwritepost .vimrc,packages.vim source $MYVIMRC
+  autocmd!
+  autocmd! bufwritepost .vimrc,packages.vim source $MYVIMRC
 augroup end
 
 " map space to nerd tree
