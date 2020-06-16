@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
-Plug 'ThePrimeagen/vim-be-good'
+Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 
 " intellisense for vim!!!
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
