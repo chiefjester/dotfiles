@@ -5,15 +5,6 @@ source ~/.vim_includes/functions.vim
 
 highlight Comment cterm=italic
 
-" check what's the syntax
-nmap <C-S-P> :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
-
 let g:colorizer_auto_filetype='css,html,yaml'
 " for vim gutter, set to 4000 otherwise
 " set updatetime=4000
