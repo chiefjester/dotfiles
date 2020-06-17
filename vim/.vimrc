@@ -43,25 +43,6 @@ set bg=dark                              " use dark background color
 set laststatus=1                         " always show the status line
 set wrap
 
-" " vimwiki folding settings
-" let g:vimwiki_folding='list'
-" nnoremap <leader>gg <Plug>VimwikiToggleListItem
-nmap <Leader>tl <Plug>VimwikiToggleListItem
-vmap <Leader>tl <Plug>VimwikiToggleListItem
-nmap <Leader>rl <Plug>VimwikiRemoveSingleCB
-vmap <Leader>rl <Plug>VimwikiRemoveSingleCB
-nmap <c-space> <nul>
-
-let g:vimwiki_folding='list'
-
-" let g:vimwiki_list = [ {'path': '~/personal-wiki/',
-"                        \ 'syntax': 'markdown', 'ext': '.md'}]
-
-
-" let personal = {}
-" let personal.path = '~/wiki/personal/'
-" let personal.syntax = 'markdown'
-" let personal.ext = '.md'
 
 let work = {}
 let work.path = '~/wiki/work/'
