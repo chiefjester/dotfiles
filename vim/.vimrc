@@ -43,14 +43,6 @@ set bg=dark                              " use dark background color
 set laststatus=1                         " always show the status line
 set wrap
 
-
-let work = {}
-let work.path = '~/wiki/work/'
-let work.syntax = 'markdown'
-let work.ext = '.md'
-
-let g:vimwiki_list = [work]
-
 set laststatus=2                                                                         " always show statusline
 set statusline=                                                                          " clear statusline
 set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
