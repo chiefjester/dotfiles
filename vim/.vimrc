@@ -43,10 +43,9 @@ set bg=dark                              " use dark background color
 set laststatus=1                         " always show the status line
 set wrap
 
-
 " line number
-set rnu                                                                                  " turn on relative numbers
-set number                                                                               " set current line number
+set rnu                                  " turn on relative numbers
+set number                               " set current line number
 
 " default tabs and indentation
 set tabstop=2                            " number of visual spaces per tab
