@@ -60,16 +60,12 @@ let g:gitgutter_preview_win_floating = 0 " setlocal foldmarker={,}				" for js, 
 set foldlevel=999                        " don't start window folded
                                          " set noexpandtab                          " use tabs, not spaces
 set expandtab                            " tab to spaces
+
 " search
 set incsearch                            " search as characters are entered
 set hlsearch                             " highlight matches
 set ignorecase                           " ignore case when searching lowercase
 set smartcase                            " don't ignore case when inserting uppercase characters
-
-augroup vimwikiFoldLevel
-  autocmd!
-  autocmd BufEnter *.wiki set foldlevel=1
-augroup end
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
