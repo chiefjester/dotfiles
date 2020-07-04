@@ -58,7 +58,7 @@ set encoding=utf-8                       " encode utf-8 by default
 set foldmethod=indent                    " fold method to maker, default folding of vim sucks
 let g:gitgutter_preview_win_floating = 0 " setlocal foldmarker={,}				" for js, and css
 set foldlevel=999                        " don't start window folded
-" set noexpandtab                          " use tabs, not spaces
+                                         " set noexpandtab                          " use tabs, not spaces
 set expandtab                            " tab to spaces
 " search
 set incsearch                            " search as characters are entered
