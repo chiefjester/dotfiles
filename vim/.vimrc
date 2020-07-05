@@ -85,19 +85,6 @@ let g:fzf_layout = { 'up': '~60%' }
 set list                                                        " show non-printable characters
 set listchars=tab:▸\ ,trail:-,extends:>,precedes:<,nbsp:+,eol:¬ " customize shown characters
 
-
-noremap <C-h> <C-w>h
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-
-nnoremap / /\v
-vnoremap / /\v
-
-" remap split
-nnoremap ,v <C-w>v
-nnoremap ,h <C-w>s
-
 " automake directories"
 augroup automkdir
   autocmd!
