@@ -85,10 +85,6 @@ let g:fzf_layout = { 'up': '~60%' }
 set list                                                        " show non-printable characters
 set listchars=tab:▸\ ,trail:-,extends:>,precedes:<,nbsp:+,eol:¬ " customize shown characters
 
-" ---- mappings
-" make it easy to edit vimrc file use $myvimrc as global variable
-nmap <Leader>es :update<cr>
-nmap <Leader>ev :tabedit ~/.vimrc<cr>
 
 noremap <Leader>f :Files<cr>
 noremap <Leader>z :update<cr>
