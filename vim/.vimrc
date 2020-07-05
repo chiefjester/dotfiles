@@ -86,14 +86,6 @@ set list                                                        " show non-print
 set listchars=tab:▸\ ,trail:-,extends:>,precedes:<,nbsp:+,eol:¬ " customize shown characters
 
 
-noremap <Leader>f :Files<cr>
-noremap <Leader>z :update<cr>
-noremap <Leader>q :q<cr>
-noremap <Leader>a :qa<cr>
-noremap <Leader>A :qa!<cr>
-noremap <Leader>o :only<cr>
-noremap <Leader>w <C-w>
-
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
