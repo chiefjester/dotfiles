@@ -18,10 +18,10 @@ set -gx GDK_SCALE 2
 set -gx QT_SCALE_FACTOR 2
 set -gx GDK_DPI_SCALING 2
 
-# set-up gpg
-if type -q gpg 
-  set -x GPG_TTY (tty)
-end
+# # set-up gpg
+# if type -q gpg 
+#   set -x GPG_TTY (tty)
+# end
 
 # set -x SSH_AUTH_SOCK $HOME/.ssh/agent.sock
 # ss -a | grep -q $SSH_AUTH_SOCK
