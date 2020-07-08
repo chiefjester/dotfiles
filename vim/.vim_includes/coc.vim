@@ -1,3 +1,5 @@
+let g:node_client_debug = 1 
+
 vmap <leader>t <Plug>(coc-format-selected)
 nmap <leader>t <Plug>(coc-format-selected)
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
