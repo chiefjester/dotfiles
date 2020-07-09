@@ -4,8 +4,8 @@
 " colorscheme dracula
 colorscheme gruvbox
 let g:gruvbox_italicize_comments = '1'
-let g:gruvbox_contrast_dark = 'soft'
-"
+let g:gruvbox_contrast_dark = 'hard'
+
 " hi Normal guibg=1d2021 ctermbg=1d2021
 hi Normal guibg=NONE ctermbg=NONE
 hi SignColumn guibg=NONE
