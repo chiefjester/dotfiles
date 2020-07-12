@@ -28,8 +28,8 @@ nnoremap ,h <C-w>s
 " thanks Kevin, taken from: http://www.kevinli.co/posts/2017-01-19-multiple-cursors-in-500-bytes-of-vimscript/
 let g:mc = "y/\\V\<C-r>=escape(@\", '/')\<CR>\<CR>"
 
-nnoremap cn *``cgn
-nnoremap cN *``cgN
+nnoremap cn *Ncgn
+nnoremap cN *NcgN
 
 vnoremap <expr> cn g:mc . "``cgn"
 vnoremap <expr> cN g:mc . "``cgN"
