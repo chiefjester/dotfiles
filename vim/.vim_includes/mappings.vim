@@ -11,10 +11,10 @@ noremap <Leader>A :qa!<cr>
 noremap <Leader>o :only<cr>
 noremap <Leader>w <C-w>
 
-noremap <C-h> <C-w>h
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
+" noremap <C-h> <C-w>h
+" noremap <C-j> <C-w>j
+" noremap <C-k> <C-w>k
+" noremap <C-l> <C-w>l
 
 nnoremap / /\v
 vnoremap / /\v
