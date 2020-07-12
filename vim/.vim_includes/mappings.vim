@@ -31,8 +31,8 @@ let g:mc = "y/\\V\<C-r>=escape(@\", '/')\<CR>\<CR>"
 nnoremap cn *Ncgn
 nnoremap cN *NcgN
 
-vnoremap <expr> cn g:mc . "``cgn"
-vnoremap <expr> cN g:mc . "``cgN"
+vnoremap <expr> cn g:mc . "Ncgn"
+vnoremap <expr> cN g:mc . "NcgN"
 vnoremap cc c
 
 function! SetupCR()
