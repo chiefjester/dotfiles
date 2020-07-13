@@ -34,11 +34,12 @@ Plug 'christoomey/vim-tmux-navigator'
 " Plug 'thaerkh/vim-workspace'
 Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'vimwiki/vimwiki'
+
 Plug 'mattn/calendar-vim'
 " Plug 'mhinz/vim-startify'
 
 " colorschemes
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'gruvbox-community/gruvbox' 
 
 " syntax 
@@ -46,6 +47,6 @@ Plug 'mattn/emmet-vim'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-commentary'
 " Plug 'sheerun/vim-polyglot'
-Plug 'chrisbra/Colorizer'
+" Plug 'chrisbra/Colorizer'
 
 call plug#end()
