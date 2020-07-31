@@ -10,7 +10,7 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
 set -gx NPM_CONFIG_PREFIX "~/.npm-global"
-/tmp/keyrate/keyrate.exe 300 1
+~/bin/keyrate.exe 300 1
 
 # GDK scale for X11 applications
 set -gx GDK_SCALE 2
