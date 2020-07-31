@@ -44,8 +44,8 @@ end
 if uname -a | grep 'microsoft' >/dev/null
   set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0
   # clean up tmp
-  if type -q /home/chris/bin/cleanup
-    sudo /home/chris/bin/cleanup
+  if type -q ~/bin/cleanup
+    ~/bin/cleanup
   end
 end
 
