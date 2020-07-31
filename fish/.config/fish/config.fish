@@ -49,7 +49,7 @@ if uname -a | grep 'microsoft' >/dev/null
   end
 end
 
-set -gx VISUAL nvim
+set -gx VISUAL /usr/local/bin/nvim
 set -gx EDITOR $VISUAL
 
 if type -q wslview 
