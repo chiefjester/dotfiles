@@ -62,3 +62,5 @@ nnoremap <silent> \x :cclose<CR>
 nnoremap <silent> \c :copen<CR>
 
 nnoremap <Leader>ct :ColorToggle<CR>
+
+autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
