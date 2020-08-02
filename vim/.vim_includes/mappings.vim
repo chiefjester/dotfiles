@@ -63,4 +63,6 @@ nnoremap <silent> \c :copen<CR>
 
 nnoremap <Leader>ct :ColorToggle<CR>
 
+" https://github.com/junegunn/fzf/issues/1393
+" remaps escape to c-c
 autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
