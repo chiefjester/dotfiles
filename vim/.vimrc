@@ -47,9 +47,6 @@ set wrap
 set rnu                                  " turn on relative numbers
 set number                               " set current line number
 
-nmap [ {
-nmap ] }
-
 " default tabs and indentation
 set tabstop=2                            " number of visual spaces per tab
 set shiftwidth=2                         " number of spaces for each step of autoindent
