@@ -1,3 +1,6 @@
+" add built in cfilter
+packadd cfilter
+
 "install vim-plug if it is not installed
 " from https://github.com/dboucken/dotfiles/blob/master/.vimrc
 if empty(glob('~/.vim/autoload/plug.vim'))
