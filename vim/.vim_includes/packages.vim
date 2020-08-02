@@ -35,7 +35,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-unimpaired'
 Plug 'christoomey/vim-tmux-navigator'
 " Plug 'thaerkh/vim-workspace'
-Plug 'stefandtw/quickfix-reflector.vim'
+" Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'vimwiki/vimwiki'
 
 Plug 'mattn/calendar-vim'
