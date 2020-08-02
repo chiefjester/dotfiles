@@ -49,6 +49,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'mattn/emmet-vim'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-commentary'
+Plug 'cespare/vim-toml'
 " Plug 'sheerun/vim-polyglot'
 " Plug 'chrisbra/Colorizer'
 
