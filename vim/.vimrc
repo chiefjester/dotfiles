@@ -15,12 +15,6 @@ if executable("rg")
   " let g:zettel_fzf_command = "rg --column --line-number --ignore-case --no-heading --color=always "
 endif
 
-" vim-workspace directory
-let g:workspace_session_directory = $HOME . '/.vim/sessions/'
-nnoremap gsw :ToggleWorkspace<CR>
-let g:workspace_persist_undo_history = 0
-let g:workspace_autosave = 0
-
 " general settings
 set wildmenu
 set path=$PWD/**
@@ -43,6 +37,10 @@ set bg=dark                              " use dark background color
 set laststatus=1                         " always show the status line
 set wrap
 
+" The error format option needs to be set for :cgetbuff to work properly
+" https://www.reddit.com/r/vim/comments/7dv9as/how_to_edit_the_vim_quickfix_list/
+set errorformat=%f\|%l\ col\ %c\|%m
+
 " line number
 set rnu                                  " turn on relative numbers
 set number                               " set current line number
@@ -55,7 +53,7 @@ set encoding=utf-8                       " encode utf-8 by default
 set foldmethod=indent                    " fold method to maker, default folding of vim sucks
 let g:gitgutter_preview_win_floating = 0 " setlocal foldmarker={,}				" for js, and css
 set foldlevel=999                        " don't start window folded
-                                         " set noexpandtab                          " use tabs, not spaces
+" set noexpandtab                        " use tabs, not spaces
 set expandtab                            " tab to spaces
 
 " search
@@ -94,89 +92,17 @@ augroup autosourcing
   autocmd! bufwritepost .vimrc,packages.vim source $MYVIMRC
 augroup end
 
-" map space to nerd tree
-noremap <leader>kb :NERDTreeToggle<CR>
-noremap <leader>kf :NERDTreeFind<CR>
-let NERDTreeIgnore=['*/node_modules/*']
-let g:NERDTreeHijackNetrw=0
-let g:NERDTreeShowHidden=1
-let g:NERDTreeAutoDeleteBuffer=1
-let g:NERDTreeQuitOnOpen = 1
-" let g:netrw_rmf_cmd = 'ssh HOSTNAME rm -rf'
-"
-"
-let g:netrw_rm_cmd='ssh HOSTNAME rm -rf'
-let g:netrw_rmdir_cmd='ssh HOSTNAME rm -rf'
-set sessionoptions-=blank
-
-" easyalign mappings
-nmap ga <Plug>(EasyAlign)
-xmap ga <Plug>(EasyAlign)
-
-" make easyalign ignore spaces
-let g:easy_align_ignore_groups = []
-
 nmap <silent> <leader>no :nohlsearch<CR>
 
-" netrw settings
-let g:netrw_keepdir = 1
-let g:netrw_fastbrowse=0
-let g:netrw_liststyle=0
-
-" ---- emmet
-"  make it work on html,css,javascript
-"  make Ctrl-z default mapping
-let g:user_emmet_install_global = 0
-autocmd FileType html,css,javascript EmmetInstall
-" let g:user_emmet_leader_key='<C-z>'
 
 " ---- bufferline
 let g:bufferline_echo = 1
 
 " run in 256 on normal vim
 if !has('gui_running')
-	set t_Co=256
+  set t_Co=256
 endif
 
-" general enhancements
-" alternative for multi cursors
-" thanks Kevin, taken from: http://www.kevinli.co/posts/2017-01-19-multiple-cursors-in-500-bytes-of-vimscript/
-let g:mc = "y/\\V\<C-r>=escape(@\", '/')\<CR>\<CR>"
-
-nnoremap cn *``cgn
-nnoremap cN *``cgN
-
-vnoremap <expr> cn g:mc . "``cgn"
-vnoremap <expr> cN g:mc . "``cgN"
-vnoremap cc c
-
-function! SetupCR()
-	nnoremap <Enter> :nnoremap <lt>Enter> n@z<CR>q:<C-u>let @z=strpart(@z,0,strlen(@z)-1)<CR>n@z
-endfunction
-
-nnoremap cq :call SetupCR()<CR>*``qz
-nnoremap cQ :call SetupCR()<CR>#``qz
-
-vnoremap <expr> cq ":\<C-u>call SetupCR()\<CR>" . "gv" . g:mc . "``qz"
-vnoremap <expr> cQ ":\<C-u>call SetupCR()\<CR>" . "gv" . substitute(g:mc, '/', '?', 'g') . "``qz"
-
-nnoremap <Leader>l :ls<CR>:b<space>
-
-" Quickly create a new terminal in a vertical split
-tnoremap <Leader>5 <C-\><C-n>:vsp<CR><C-w><C-w>:term<CR>I
-noremap <Leader>5 :vsp<CR><C-w><C-w>:term<CR>I
-inoremap <Leader>5 <Esc>:vsp<CR><C-w><C-w>:term<CR>I
-
-" Quickly create a new terminal in a horizontal split
-tnoremap <Leader>6 <C-\><C-n>:sp<CR><C-w><C-w>:term<CR>I
-noremap <Leader>6 :sp<CR><C-w><C-w>:term<CR>I
-inoremap <Leader>6 <Esc>:sp<CR><C-w><C-w>:term<CR>I
-
-" close buffer
-nnoremap <silent> \x :cclose<CR>
-nnoremap <silent> \c :copen<CR>
-
-nnoremap <Leader>ct :ColorToggle<CR>
 
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
@@ -193,10 +119,6 @@ nnoremap gdl :diffget //3<CR>
 " make . to work with visually selected lines
 vnoremap . :normal.<CR>”
 
-" " Move visual selection
-" vnoremap J :m '>+1<CR>gv=gv
-" vnoremap K :m '<-2<CR>gv=gv”
-
 " set eslintrc to json
 au BufNewFile,BufRead,BufReadPost *.eslintrc set ft=json
 
@@ -206,30 +128,34 @@ let g:jsx_ext_required = 1
 
 " *********************
 
-" goyo
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
+source ~/.vim_includes/colors.vim
+source ~/.vim_includes/vimwiki.vim
+source ~/.vim_includes/mappings.vim
 source ~/.vim_includes/fzf.vim
+source ~/.vim_includes/coc.vim
+source ~/.vim_includes/statusline.vim
+source ~/.vim_includes/emmet.vim
+source ~/.vim_includes/easyalign.vim
 
 " nvim specific mappings and settings
 if has("nvim")
 
-	" remove guicursor in neovim
-	set guicursor=
-	set inccommand=nosplit
-	" make escape work in the neovim terminal.
-	tnoremap <Esc> <C-\><C-n>
+  " remove guicursor in neovim
+  set guicursor=
+  set inccommand=nosplit
+  " make escape work in the neovim terminal.
+  tnoremap <Esc> <C-\><C-n>
 
-	" make navigation into and out of neovim terminal splits nicer.
-	tnoremap <C-h> <C-\><C-N><C-w>h
-	tnoremap <C-j> <C-\><C-N><C-w>j
-	tnoremap <C-k> <C-\><C-N><C-w>k
-	tnoremap <C-l> <C-\><C-N><C-w>l
+  " " make navigation into and out of neovim terminal splits nicer.
+  " tnoremap <C-h> <C-\><C-N><C-w>h
+  " tnoremap <C-j> <C-\><C-N><C-w>j
+  " tnoremap <C-k> <C-\><C-N><C-w>k
+  " tnoremap <C-l> <C-\><C-N><C-w>l
 
-	" i like relative numbering when in normal mode.
-	autocmd TermOpen * setlocal conceallevel=0 colorcolumn=0 relativenumber
+  " i like relative numbering when in normal mode.
+  autocmd TermOpen * setlocal conceallevel=0 colorcolumn=0 relativenumber
 
-	" prefer neovim terminal insert mode to normal mode.
-	autocmd BufEnter term://* startinsert
+  " prefer neovim terminal insert mode to normal mode.
+  autocmd BufEnter term://* startinsert
 
 endif
