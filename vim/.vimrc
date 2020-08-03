@@ -73,10 +73,6 @@ else
   set signcolumn=yes
 endif
 
-set rtp+=/usr/local/opt/fzf
-
-let g:fzf_layout = { 'up': '~60%' }
-
 
 " non printable characters
 set list                                                        " show non-printable characters
@@ -213,6 +209,7 @@ let g:jsx_ext_required = 1
 " goyo
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
+source ~/.vim_includes/fzf.vim
 
 " nvim specific mappings and settings
 if has("nvim")
