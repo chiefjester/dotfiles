@@ -86,3 +86,4 @@ if [ -f '/home/chris/google-cloud-sdk/path.fish.inc' ]; . '/home/chris/google-cl
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 
+set -gx PATH "/home/chris/.fzf/bin" $PATH
