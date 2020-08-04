@@ -16,6 +16,7 @@ if executable("rg")
 endif
 
 " general settings
+set splitright                     " to control dirvish preview option
 set wildmenu
 set path=$PWD/**
 set path+=$PWD/.github/**
