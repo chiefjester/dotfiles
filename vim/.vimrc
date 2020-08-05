@@ -20,22 +20,22 @@ set wildmenu
 set wildmode=longest,full
 set path=$PWD/**
 set path+=$PWD/.github/**
-set wildignore+=**/node_modules/**       " remove node_modules from find
-set wildignore+=**/.git/**               " remove node_modules from find
-set backspace=indent,eol,start           " make vim behave like any other editors
-let mapleader=','                        " set leader character
-set linespace=14                         " spacing between lines
-se mouse+=a                              " enable mouse support
-set noswapfile                           " disable creation of .swap
-set hidden                               " hides buffer instead of closing them
-set clipboard+=unnamedplus               " make os's clipboard work
-set ic                                   " set ignore case when searching
-set nocompatible                         " enable vim features by opting out of vi compatibility
-syntax enable                            " enable syntax detection
-filetype indent on                       " add indent on file type
-filetype plugin on                       " turn on plugin for file type
-set bg=dark                              " use dark background color
-set laststatus=1                         " always show the status line
+set wildignore+=**/node_modules/** " remove node_modules from find
+set wildignore+=**/.git/**         " remove node_modules from find
+set backspace=indent,eol,start     " make vim behave like any other editors
+let mapleader=','                  " set leader character
+set linespace=14                   " spacing between lines
+se mouse+=a                        " enable mouse support
+set noswapfile                     " disable creation of .swap
+set hidden                         " hides buffer instead of closing them
+set clipboard+=unnamedplus         " make os's clipboard work
+set ic                             " set ignore case when searching
+set nocompatible                   " enable vim features by opting out of vi compatibility
+syntax enable                      " enable syntax detection
+filetype indent on                 " add indent on file type
+filetype plugin on                 " turn on plugin for file type
+set bg=dark                        " use dark background color
+set laststatus=1                   " always show the status line
 set wrap
 
 " The error format option needs to be set for :cgetbuff to work properly
