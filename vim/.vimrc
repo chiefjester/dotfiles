@@ -40,7 +40,8 @@ set wrap
 
 " The error format option needs to be set for :cgetbuff to work properly
 " https://www.reddit.com/r/vim/comments/7dv9as/how_to_edit_the_vim_quickfix_list/
-set errorformat=%f\|%l\ col\ %c\|%m
+" set errorformat=%f\|%l\ col\ %c\|%m
+" set errorformat=%f
 
 " line number
 set rnu                                  " turn on relative numbers
@@ -137,6 +138,7 @@ source ~/.vim_includes/coc.vim
 source ~/.vim_includes/statusline.vim
 source ~/.vim_includes/emmet.vim
 source ~/.vim_includes/easyalign.vim
+source ~/.vim_includes/dirvish.vim
 
 " nvim specific mappings and settings
 if has("nvim")
@@ -160,3 +162,4 @@ if has("nvim")
   autocmd BufEnter term://* startinsert
 
 endif
+
