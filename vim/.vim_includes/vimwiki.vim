@@ -23,3 +23,5 @@ augroup vimwikiFoldLevel
   autocmd BufEnter *.md set foldlevel=1
 augroup end
 
+let g:vimwiki_global_ext = 0
+" let g:vimwiki_ext2syntax = {}
