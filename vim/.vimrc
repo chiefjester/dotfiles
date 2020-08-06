@@ -88,10 +88,16 @@ augroup automkdir
 augroup END
 
 
-" automatically source the vimrc file on save.
+" " automatically source the vimrc file on save.
+" augroup autosourcing
+"   autocmd!
+"   autocmd! bufwritepost .vimrc,packages.vim source $MYVIMRC
+" augroup end
+
 augroup autosourcing
   autocmd!
-  autocmd! bufwritepost .vimrc,packages.vim source $MYVIMRC
+  " dotfiles autosourcing
+  autocmd BufWritePost ~/dotfiles/** source $MYVIMRC
 augroup end
 
 nmap <silent> <leader>no :nohlsearch<CR>
