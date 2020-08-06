@@ -169,3 +169,7 @@ if has("nvim")
 
 endif
 
+vmap <F4> <Esc>:v/\%V/d_ <bar> :noh<cr>
+" vmap <F4> <Esc>:sil 1,'<-1d_ <bar> '>+1,$d_<cr><cr>
+" map <F4> :<C-U>1,'<-1:delete<CR>:'>+1,$:delete<CR>
+"
