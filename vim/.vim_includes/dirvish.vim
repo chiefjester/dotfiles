@@ -1,6 +1,10 @@
+" this unloads netrw
+let g:loaded_netrw= 1
+let g:netrw_loaded_netrwPlugin= 1 
+
 augroup dirvish_config
   autocmd!
-  
+
   let g:dirvish_mode = ':sort ,^.*[\/],'
 	set splitright                     " to control dirvish preview option
   " Map `t` to open in new tab.
