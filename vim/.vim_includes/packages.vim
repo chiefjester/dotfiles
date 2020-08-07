@@ -45,7 +45,10 @@ Plug 'justinmk/vim-dirvish'
 
 " colorschemes
 " Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'gruvbox-community/gruvbox' 
+" Plug 'gruvbox-community/gruvbox' 
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'sainnhe/gruvbox-material'
+" Plug 'arzg/vim-corvine'
 
 " syntax 
 Plug 'mattn/emmet-vim'
