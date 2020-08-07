@@ -40,6 +40,8 @@ Plug 'vimwiki/vimwiki'
 
 Plug 'mattn/calendar-vim'
 " Plug 'mhinz/vim-startify'
+" Plug 'preservim/nerdtree'
+Plug 'justinmk/vim-dirvish'
 
 " colorschemes
 " Plug 'dracula/vim', { 'as': 'dracula' }
