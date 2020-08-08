@@ -144,6 +144,8 @@ source ~/.vim_includes/coc.vim
 source ~/.vim_includes/statusline.vim
 source ~/.vim_includes/emmet.vim
 source ~/.vim_includes/easyalign.vim
+" source ~/.vim_includes/netrw.vim
+" source ~/.vim_includes/fern.vim
 source ~/.vim_includes/dirvish.vim
 
 " nvim specific mappings and settings
