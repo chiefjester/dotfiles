@@ -41,7 +41,7 @@ set wrap
 " The error format option needs to be set for :cgetbuff to work properly
 " https://www.reddit.com/r/vim/comments/7dv9as/how_to_edit_the_vim_quickfix_list/
 " set errorformat=%f\|%l\ col\ %c\|%m
-" set errorformat=%f
+set errorformat=%f
 
 " line number
 set rnu                                  " turn on relative numbers
