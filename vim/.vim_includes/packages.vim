@@ -55,6 +55,11 @@ Plug 'mattn/emmet-vim'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-commentary'
 Plug 'cespare/vim-toml'
+" Plug 'lambdalisue/fern.vim'
+" Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+" Plug 'lambdalisue/nerdfont.vim' 
+" Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
+
 " Plug 'sheerun/vim-polyglot'
 " Plug 'chrisbra/Colorizer'
 
