@@ -71,12 +71,24 @@ function fish_user_key_bindings
     end
 end
 
-function ...
-     cd ../..
+# recursively go up to directories
+# you can now append data https://stackoverflow.com/questions/50027770/fish-shell-how-to-append-an-element-to-an-array
+# function cdf
+#   for i in (seq $argv)
+#     set -a data "../"
+#   end
+#   if test -n "$data"
+#     cd (string join "" $data)
+#   end
+# end
+
+# based from https://superuser.com/questions/449687/using-cd-to-go-up-multiple-directory-levels/449705
+# improve cdf version
+function cd_up
+  cd (printf "%.s../" (seq $argv))
 end
 
-function ....
-     cd ../../..
+alias 'cd..'='cd_up'
 end
 
 alias tt="du -hsx * | sort -rh | head -10"
