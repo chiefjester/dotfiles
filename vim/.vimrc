@@ -1,7 +1,6 @@
 " Plugins
-source ~/.vim_includes/packages.vim
-source ~/.vim_includes/coc.vim
-source ~/.vim_includes/functions.vim
+source ~/_includes/packages.vim
+source ~/_includes/functions.vim
 
 highlight Comment cterm=italic
 
@@ -38,6 +37,7 @@ set bg=dark                        " use dark background color
 set laststatus=1                   " always show the status line
 set wrap
 
+
 " The error format option needs to be set for :cgetbuff to work properly
 " https://www.reddit.com/r/vim/comments/7dv9as/how_to_edit_the_vim_quickfix_list/
 " set errorformat=%f\|%l\ col\ %c\|%m
@@ -73,7 +73,6 @@ else
   set signcolumn=yes
 endif
 
-
 " non printable characters
 set list                                                        " show non-printable characters
 set listchars=tab:▸\ ,trail:-,extends:>,precedes:<,nbsp:+,eol:¬ " customize shown characters
@@ -87,21 +86,14 @@ augroup automkdir
         \ endif
 augroup END
 
-
-" " automatically source the vimrc file on save.
-" augroup autosourcing
-"   autocmd!
-"   autocmd! bufwritepost .vimrc,packages.vim source $MYVIMRC
-" augroup end
-
 augroup autosourcing
   autocmd!
   " dotfiles autosourcing
-  autocmd BufWritePost ~/dotfiles/** source $MYVIMRC
+  autocmd BufWritePost ~/dotfiles/**/* source $MYVIMRC
+  autocmd BufWritePost ~/_includes/* source $MYVIMRC
 augroup end
 
 nmap <silent> <leader>no :nohlsearch<CR>
-
 
 " ---- bufferline
 let g:bufferline_echo = 1
@@ -112,7 +104,7 @@ if !has('gui_running')
 endif
 
 
-let g:python_host_prog = '/usr/bin/python'
+let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python3'
 
 " for vim-fugitive
@@ -136,17 +128,18 @@ let g:jsx_ext_required = 1
 
 " *********************
 
-source ~/.vim_includes/colors.vim
-source ~/.vim_includes/vimwiki.vim
-source ~/.vim_includes/mappings.vim
-source ~/.vim_includes/fzf.vim
-source ~/.vim_includes/coc.vim
-source ~/.vim_includes/statusline.vim
-source ~/.vim_includes/emmet.vim
-source ~/.vim_includes/easyalign.vim
-" source ~/.vim_includes/netrw.vim
-" source ~/.vim_includes/fern.vim
-source ~/.vim_includes/dirvish.vim
+source ~/_includes/colors.vim
+source ~/_includes/vimwiki.vim
+source ~/_includes/mappings.vim
+source ~/_includes/fzf.vim
+source ~/_includes/coc.vim
+source ~/_includes/statusline.vim
+source ~/_includes/emmet.vim
+source ~/_includes/easyalign.vim
+" source ~/_includes/netrw.vim
+" source ~/_includes/fern.vim
+source ~/_includes/dirvish.vim
+source ~/_includes/sneak.vim
 
 " nvim specific mappings and settings
 if has("nvim")
@@ -175,3 +168,6 @@ vmap <F4> <Esc>:v/\%V/d_ <bar> :noh<cr>
 " vmap <F4> <Esc>:sil 1,'<-1d_ <bar> '>+1,$d_<cr><cr>
 " map <F4> :<C-U>1,'<-1:delete<CR>:'>+1,$:delete<CR>
 "
+onoremap i_ :normal! T_vt_<cr>
+
+nmap <silent>gx :sil !wslview <c-r><c-a><cr>
