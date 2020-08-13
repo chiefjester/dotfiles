@@ -18,30 +18,26 @@ Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 
 " intellisense for vim!!!
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-" Plug 'natebosch/vim-lsc'
-" Plug 'ajh17/VimCompletesMe'
 
 " general enhancements
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent'
+Plug 'thinca/vim-textobj-between'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-" Plug 'tpope/vim-vinegar'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-unimpaired'
 Plug 'christoomey/vim-tmux-navigator'
-" Plug 'thaerkh/vim-workspace'
-" Plug 'stefandtw/quickfix-reflector.vim'
 Plug 'vimwiki/vimwiki'
 
 Plug 'mattn/calendar-vim'
-" Plug 'mhinz/vim-startify'
-" Plug 'preservim/nerdtree'
 Plug 'justinmk/vim-dirvish'
+Plug 'justinmk/vim-sneak'
+Plug 'romainl/vim-cool'
 
 " colorschemes
 " Plug 'dracula/vim', { 'as': 'dracula' }
@@ -55,10 +51,6 @@ Plug 'mattn/emmet-vim'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-commentary'
 Plug 'cespare/vim-toml'
-" Plug 'lambdalisue/fern.vim'
-" Plug 'lambdalisue/fern-renderer-nerdfont.vim'
-" Plug 'lambdalisue/nerdfont.vim' 
-" Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
 
 " Plug 'sheerun/vim-polyglot'
 " Plug 'chrisbra/Colorizer'
