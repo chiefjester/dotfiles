@@ -25,7 +25,7 @@ let g:gruvbox_contrast_dark = 'hard'
 
 " For dark version.
 set background=dark
-hi Normal guibg=1d2021 ctermbg=1d2021
+" hi Normal guibg=#1d2021
 " hi Normal guibg=NONE ctermbg=NONE
 hi SignColumn guibg=NONE
 
