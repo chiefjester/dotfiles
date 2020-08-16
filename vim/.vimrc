@@ -17,7 +17,8 @@ endif
 " general settings
 set wildmenu
 set wildmode=longest,full
-set path=$PWD/**
+set path=$PWD
+set path+=$PWD/**
 set path+=$PWD/.github/**
 set wildignore+=**/node_modules/** " remove node_modules from find
 set wildignore+=**/.git/**         " remove node_modules from find
