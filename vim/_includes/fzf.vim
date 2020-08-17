@@ -11,3 +11,4 @@ let g:fzf_colors = { 'bg': ['bg', 'Pmenu']}
 " remaps escape to c-c
 autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
 
+noremap <silent><Leader>f :Files<cr>
