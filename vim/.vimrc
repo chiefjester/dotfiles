@@ -132,15 +132,14 @@ let g:jsx_ext_required = 1
 source ~/_includes/colors.vim
 source ~/_includes/vimwiki.vim
 source ~/_includes/mappings.vim
-source ~/_includes/fzf.vim
-source ~/_includes/coc.vim
+" source ~/_includes/fzf.vim
+source ~/_includes/lsp.vim
 source ~/_includes/statusline.vim
 source ~/_includes/emmet.vim
 source ~/_includes/easyalign.vim
-" source ~/_includes/netrw.vim
-" source ~/_includes/fern.vim
 source ~/_includes/dirvish.vim
 source ~/_includes/sneak.vim
+source ~/_includes/format.vim
 
 " nvim specific mappings and settings
 if has("nvim")
