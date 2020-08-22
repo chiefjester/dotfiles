@@ -11,8 +11,8 @@ endif
 " colorscheme night-owl
 " colorscheme corvine
 " colorscheme dracula
-" colorscheme gruvbox
-colorscheme gruvbox-material
+colorscheme gruvbox
+" colorscheme gruvbox-material
 
 let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_transparent_background = 1
