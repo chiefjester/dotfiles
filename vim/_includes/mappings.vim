@@ -1,15 +1,16 @@
 " ---- mappings
 " make it easy to edit vimrc file use $myvimrc as global variable
 nmap <Leader>es :update<cr>
-nmap <Leader>ev :tabedit ~/.vimrc<cr>
+nmap <silent><Leader>ev :tabnew <bar>:tcd ~/dotfiles<bar>:e ./vim/.vimrc<cr><cr><cr>
 
-noremap <Leader>f :Files<cr>
-noremap <Leader>z :update<cr>
-noremap <Leader>q :q<cr>
-noremap <Leader>a :qa<cr>
-noremap <Leader>A :qa!<cr>
-noremap <Leader>o :only<cr>
-noremap <Leader>w <C-w>
+noremap <silent><Leader>z :update<cr>
+noremap <silent><Leader>q :q<cr>
+noremap <silent><Leader>Q :q!<cr>
+noremap <silent><Leader>a :qa<cr>
+noremap <silent><Leader>A :qa!<cr>
+noremap <silent><Leader>o :only<cr>
+noremap <silent><Leader>w <C-w>
+noremap <Leader>mm :Move <C-r>=expand("%:p:h")<cr>
 
 " noremap <C-h> <C-w>h
 " noremap <C-j> <C-w>j
@@ -20,8 +21,8 @@ nnoremap / /\v
 vnoremap / /\v
 
 " remap split
-nnoremap ,v <C-w>v
-nnoremap ,h <C-w>s
+nnoremap <leader>v <C-w>v
+nnoremap <leader>h <C-w>s
 
 " general enhancements
 " alternative for multi cursors
@@ -63,6 +64,5 @@ nnoremap <silent> \c :copen<CR>
 
 nnoremap <Leader>ct :ColorToggle<CR>
 
-" https://github.com/junegunn/fzf/issues/1393
-" remaps escape to c-c
-autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
+map <silent> <Leader>ex :Ex <bar> :sil! /<C-R>=expand("%:t")<CR><CR>R
+
