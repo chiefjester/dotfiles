@@ -1,4 +1,5 @@
 " add built in cfilter
+" filter quickfix list
 packadd cfilter
 
 "install vim-plug if it is not installed
@@ -16,8 +17,17 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 
-" intellisense for vim!!!
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
+" Plug 'neovim/nvim-lsp'
+" Plug 'nvim-lua/completion-nvim'
+" Plug 'nvim-lua/diagnostic-nvim'
+" Plug 'steelsojka/completion-buffers'
+" Plug 'nvim-lua/lsp-status.nvim'
+
+" Plug 'prabirshrestha/quickpick.vim'
+" Plug 'prabirshrestha/quickpick-filetypes.vim'
+" Plug 'clozed2u/quickpick-files.vim'
 
 " general enhancements
 Plug 'kana/vim-textobj-entire'
@@ -41,10 +51,11 @@ Plug 'romainl/vim-cool'
 
 " colorschemes
 " Plug 'dracula/vim', { 'as': 'dracula' }
-" Plug 'gruvbox-community/gruvbox' 
+Plug 'gruvbox-community/gruvbox' 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sainnhe/gruvbox-material'
 " Plug 'arzg/vim-corvine'
+Plug 'sbdchd/neoformat'
 
 " syntax 
 Plug 'mattn/emmet-vim'
@@ -52,7 +63,5 @@ Plug 'honza/vim-snippets'
 Plug 'tpope/vim-commentary'
 Plug 'cespare/vim-toml'
 
-" Plug 'sheerun/vim-polyglot'
-" Plug 'chrisbra/Colorizer'
-
 call plug#end()
+
