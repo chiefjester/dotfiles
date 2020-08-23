@@ -169,6 +169,8 @@ vmap <F4> <Esc>:v/\%V/d_ <bar> :noh<cr>
 " vmap <F4> <Esc>:sil 1,'<-1d_ <bar> '>+1,$d_<cr><cr>
 " map <F4> :<C-U>1,'<-1:delete<CR>:'>+1,$:delete<CR>
 "
+" This mapping came from here 'Change inside any pair of characters'
+" https://www.reddit.com/r/vim/comments/i650j5/change_inside_any_pair_of_characters/g0tp68o?utm_source=share&utm_medium=web2x&context=3
 onoremap i_ :normal! T_vt_<cr>
 
 nmap <silent>gx :sil !wslview <c-r><c-a><cr>
