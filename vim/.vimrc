@@ -16,7 +16,7 @@ endif
 
 " general settings
 set wildmenu
-set wildmode=longest,full
+set wildmode=full
 set path=$PWD
 set path+=$PWD/**
 set path+=$PWD/.github/**
