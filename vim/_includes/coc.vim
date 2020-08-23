@@ -23,9 +23,9 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
+let g:coc_node_path = '/home/chris/.volta/bin/node'
 " coc settings
 let g:coc_global_extensions = [ 'coc-emmet', 'coc-json', 'coc-svelte', 'coc-snippets', 'coc-emoji', 'coc-css', 'coc-prettier', 'coc-tsserver' ]
-
 
 " let g:coc_explorer_global_presets = {
 " \   '.vim': {
