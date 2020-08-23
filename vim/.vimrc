@@ -171,3 +171,16 @@ vmap <F4> <Esc>:v/\%V/d_ <bar> :noh<cr>
 onoremap i_ :normal! T_vt_<cr>
 
 nmap <silent>gx :sil !wslview <c-r><c-a><cr>
+
+
+" got this from https://vimways.org/2018/death-by-a-thousand-files/
+" native fuzzy finding
+set wildcharm=<C-z>
+set path-=/usr/include
+nnoremap <leader>ge :e **/*<C-z><S-Tab>
+nnoremap <leader>gf :find **/*<C-z><S-Tab>
+set include=from
+set suffixesadd=.js
+" syntax on
+"
+
