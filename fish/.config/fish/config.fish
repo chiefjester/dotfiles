@@ -89,6 +89,14 @@ function cd_up
 end
 
 alias 'cd..'='cd_up'
+
+# mkdir before moving
+function mvf
+  set isFolder (string sub --start=-1 $argv[2])
+  if not test -d $argv[2]; and test "$isFolder" = "/"
+    mkdir -p -- $argv[2]
+  end
+  /usr/bin/mv $argv
 end
 
 alias tt="du -hsx * | sort -rh | head -10"
