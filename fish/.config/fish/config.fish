@@ -106,5 +106,8 @@ alias mov="rsync -av --remove-source-files"
 if [ -f '/home/chris/google-cloud-sdk/path.fish.inc' ]; . '/home/chris/google-cloud-sdk/path.fish.inc'; end
 
 set -gx PATH "/home/chris/.fzf/bin" $PATH
+
+alias mv='mvf'
+
 starship init fish | source
 zoxide init fish | source
