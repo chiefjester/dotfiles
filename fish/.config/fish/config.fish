@@ -100,6 +100,7 @@ function mvf
 end
 
 alias tt="du -hsx * | sort -rh | head -10"
+alias mov="rsync -av --remove-source-files"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/chris/google-cloud-sdk/path.fish.inc' ]; . '/home/chris/google-cloud-sdk/path.fish.inc'; end
