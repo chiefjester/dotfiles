@@ -111,3 +111,6 @@ alias mv='mvf'
 
 starship init fish | source
 zoxide init fish | source
+set -gx VOLTA_HOME "$HOME/.volta"
+set -gx PATH "$VOLTA_HOME/bin" $PATH
+set -ga PATH /home/chris/.gem/ruby/2.7.0/bin
