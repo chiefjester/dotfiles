@@ -104,7 +104,7 @@ alias mov="rsync -av --remove-source-files"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/chris/google-cloud-sdk/path.fish.inc' ]; . '/home/chris/google-cloud-sdk/path.fish.inc'; end
-set -gx VOLTA_HOME "$HOME/.volta"
-set -gx PATH "$VOLTA_HOME/bin" $PATH
 
 set -gx PATH "/home/chris/.fzf/bin" $PATH
+starship init fish | source
+zoxide init fish | source
