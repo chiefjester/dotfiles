@@ -21,16 +21,20 @@ if exists('*minpac#init')
   call minpac#init()
   call minpac#add('k-takata/minpac', {'type': 'opt'})
 
+  " lsp plugins
   call minpac#add('neovim/nvim-lsp')
   call minpac#add('nvim-lua/lsp-status.nvim')
   call minpac#add('nathunsmitty/diagnostic-nvim')
   call minpac#add('nvim-lua/completion-nvim')
+  " call minpac#add('neoclide/coc.nvim', { 'branch': 'release' })
 
-  call minpac#add('tpope/vim-surround', {'type': 'opt'})
-  call minpac#add('tpope/vim-repeat', {'type': 'opt' })
+  " tpope plugins!
+  call minpac#add('tpope/vim-surround')
+  call minpac#add('tpope/vim-repeat')
   call minpac#add('tpope/vim-commentary')
   call minpac#add('tpope/vim-unimpaired')
-  call minpac#add('tpope/vim-fugitive', {'type': 'opt'})
+  call minpac#add('tpope/vim-fugitive')
+  call minpac#add('tpope/vim-scriptease', { 'type': 'opt' })
 
   " additional text objects
   call minpac#add('kana/vim-textobj-entire')
