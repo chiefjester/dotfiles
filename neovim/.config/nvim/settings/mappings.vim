@@ -1,5 +1,5 @@
 " make it easy to edit dotfiles
-nmap <silent><Leader>ev :tabnew <bar>:tcd ~/dotfiles/nvim/.config/nvim<bar>:e ./init.vim<cr><cr><cr>
+nmap <silent><Leader>ev :tabnew <bar>:tcd ~/dotfiles/neovim/.config/nvim<bar>:e ./init.vim<bar>:setlocal path=.,,,**<cr><cr><cr>
 
 " mappings
 noremap <silent><Leader>z :update<cr>
@@ -12,14 +12,15 @@ noremap <silent><Leader>w <C-w>
 
 " browse buffer fast!
 nnoremap <Leader>l :ls<CR>:b<space>
+nnoremap <Leader>gg :g//#<Left><Left>
 
 " start wildcart expansion
 set wildcharm=<C-z>
-nnoremap <leader>ge :e **/*<C-z><S-Tab>
+nnoremap <leader>ge :e **/<C-z><S-Tab>
 
 " remove usr/include from path, vim has deep roots from c
 set path-=/usr/include
-nnoremap <leader>gf :find **/*<C-z><S-Tab>
+nnoremap <leader>gf :find **/<C-z><S-Tab>
 
 " for js settings
 set include=from
