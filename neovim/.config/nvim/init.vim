@@ -42,11 +42,12 @@ if exists('*minpac#init')
   call minpac#add('kana/vim-textobj-indent')
   call minpac#add('thinca/vim-textobj-between')
 
-  call minpac#add('editorconfig/editorconfig-vim')
-  call minpac#add('christoomey/vim-tmux-navigator')
+
+  " for note taking
   call minpac#add('vimwiki/vimwiki')
   call minpac#add('mattn/calendar-vim')
 
+  " file manager and jump
   call minpac#add('justinmk/vim-dirvish')
   call minpac#add('justinmk/vim-sneak')
 
@@ -55,12 +56,21 @@ if exists('*minpac#init')
   call minpac#add('NLKNguyen/papercolor-theme', { 'type': 'opt' })
   call minpac#add('sainnhe/gruvbox-material', { 'type': 'opt' })
 
-  call minpac#add('honza/vim-snippets')
+  " misc
+  call minpac#add('capaj/vscode-standardjs-snippets')
   call minpac#add('cespare/vim-toml')
 
+  " general enhancements
+  call minpac#add('editorconfig/editorconfig-vim')
+  call minpac#add('christoomey/vim-tmux-navigator')
   call minpac#add('romainl/vim-cool')
-  call minpac#add('junegunn/vim-easy-align', {'type': 'opt'})
   call minpac#add('mattn/emmet-vim')
+  call minpac#add('hrsh7th/vim-vsnip')
+  call minpac#add('hrsh7th/vim-vsnip-integ')
+
+  call minpac#add('junegunn/vim-easy-align')
+  call minpac#add('junegunn/fzf', {'type': 'opt'})
+  call minpac#add('junegunn/fzf.vim', {'type': 'opt'})
 endif
 
 " source lua, since it's not autosourced
