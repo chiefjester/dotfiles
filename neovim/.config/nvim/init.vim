@@ -94,6 +94,8 @@ runtime plugins/dirvish.vim
 runtime plugins/easyalign.vim
 runtime plugins/emmet.vim
 runtime plugins/vimwiki.vim
+runtime plugins/fzf.vim
+" runtime plugins/coc.vim
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
 command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
