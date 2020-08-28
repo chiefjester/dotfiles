@@ -86,6 +86,7 @@ runtime settings/mappings.vim
 runtime settings/functions.vim
 runtime settings/statusline.vim
 runtime settings/format.vim
+runtime settings/lint.vim
 
 " plugin settings
 runtime plugins/vim-sneak.vim
