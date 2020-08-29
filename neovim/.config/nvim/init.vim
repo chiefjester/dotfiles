@@ -111,7 +111,5 @@ command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
 " inoremap (<CR> (<CR>)<Esc>ko
 inoremap { {<CR>}<Esc>ko
 
-  return ''
-endfunction
+cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 
-set statusline+=\ %{LspStatus()}
