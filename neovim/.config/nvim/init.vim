@@ -105,6 +105,11 @@ command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
 " lua require("lsp")
 " runtime plugins/lsp.vim
 
+" execute 'inoremap <buffer> <silent> <C-y> <C-R>=AutoPairsReturn()<CR>'
+" inoremap {<CR> {<CR>}<Esc>ko
+" inoremap [<CR> [<CR>]<Esc>ko
+" inoremap (<CR> (<CR>)<Esc>ko
+inoremap { {<CR>}<Esc>ko
 
   return ''
 endfunction
