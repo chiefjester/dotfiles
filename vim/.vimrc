@@ -1,1 +1,2 @@
-runtime settings/general.vim
+runtime init.vim
+
