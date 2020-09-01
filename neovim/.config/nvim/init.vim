@@ -111,5 +111,8 @@ command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
 " inoremap (<CR> (<CR>)<Esc>ko
 inoremap { {<CR>}<Esc>ko
 
-cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
+" cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
+" cnoreabbrev <expr> W((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 
+" command W w 
+cnoreabbrev W w
