@@ -48,6 +48,8 @@ if exists('*minpac#init')
   " misc
   call minpac#add('capaj/vscode-standardjs-snippets')
   call minpac#add('cespare/vim-toml')
+  call minpac#add('pangloss/vim-javascript')
+  call minpac#add('mxw/vim-jsx')
 
   " general enhancements
   call minpac#add('editorconfig/editorconfig-vim')
