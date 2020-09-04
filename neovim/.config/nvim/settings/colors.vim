@@ -30,3 +30,14 @@ hi Pmenu guibg=#1a1a1a
 hi Term guibg=#1a1a1a
 hi Floating guibg=#000000 ctermbg=NONE
 
+highlight Comment cterm=italic gui=italic
+highlight htmlArg gui=italic cterm=italic
+highlight Type gui=italic cterm=italic
+highlight Conditional gui=italic cterm=italic
+highlight jsFunction gui=italic cterm=italic
+highlight jsFuncArgs gui=italic cterm=italic
+highlight jsTry gui=italic cterm=italic
+highlight jsCatch gui=italic cterm=italic
+highlight jsUndefined gui=italic cterm=italic guifg=red
+
+let g:gruvbox_italic=1
