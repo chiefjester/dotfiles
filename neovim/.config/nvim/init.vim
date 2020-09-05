@@ -116,3 +116,6 @@ inoremap { {<CR>}<Esc>ko
 
 " command W w 
 cnoreabbrev W w
+
+set wildoptions=pum
+set pumblend=20
