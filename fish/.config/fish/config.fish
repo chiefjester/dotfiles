@@ -62,6 +62,11 @@ set -gx PATH "$HOME/.fzf/bin" $PATH
 
 alias mv='mvf'
 
+set -ga PATH "$HOME/.gem/ruby/2.7.0/bin"
+set -ga PATH "$HOME/.cargo/bin"
+# set -U fish_cursor_default line
+
+# set -x fish_cursor_default line
 starship init fish | source
 zoxide init fish | source
 set -ga PATH "$HOME/.gem/ruby/2.7.0/bin"
