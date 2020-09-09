@@ -73,6 +73,6 @@ set -x fish_cursor_insert underscore
 
 starship init fish | source
 zoxide init fish | source
-set -ga PATH "$HOME/.gem/ruby/2.7.0/bin"
+# set -ga PATH "$HOME/.npm-global/bin"
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
