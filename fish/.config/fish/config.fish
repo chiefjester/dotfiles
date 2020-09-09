@@ -67,6 +67,10 @@ set -ga PATH "$HOME/.cargo/bin"
 # set -U fish_cursor_default line
 
 # set -x fish_cursor_default line
+# set -x fish_cursor_visual line
+set -x fish_cursor_insert underscore
+# set -x fish_cursor_replace_one underscore
+
 starship init fish | source
 zoxide init fish | source
 set -ga PATH "$HOME/.gem/ruby/2.7.0/bin"
