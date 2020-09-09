@@ -76,3 +76,4 @@ zoxide init fish | source
 # set -ga PATH "$HOME/.npm-global/bin"
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
+set -ga PATH "$HOME/go/bin"
