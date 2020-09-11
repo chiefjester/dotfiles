@@ -18,6 +18,7 @@ set statusline+=%{&buftype!='terminal'?expand('%:p:h:t').'\\'.expand('%:t'):expa
 set statusline+=%m                                                                       " modified flag
 set statusline+=%r                                                                       " read only flag
 set statusline+=%=                                                                       " left/right separator
+set statusline+=%{exists('g:loaded_fugitive')?fugitive#head():''}
 set statusline+=\ \|\ %{getcwd()}                                                        " current working directory
 set statusline+=\ [%{strlen(&ft)?(&ft\ .\ \',\'):''}                                     " filetype
 set statusline+=%{strlen(&fenc)?(&fenc\ .\ \',\'):''}                                    " file encoding
