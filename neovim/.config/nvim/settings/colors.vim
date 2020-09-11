@@ -4,7 +4,7 @@ if (has("termguicolors"))
 endif
 
 
-colorscheme gruvbox
+silent! colorscheme gruvbox
 
 let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_transparent_background = 1
