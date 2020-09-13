@@ -57,7 +57,6 @@ if exists('*minpac#init')
   call minpac#add('romainl/vim-cool')
   call minpac#add('mattn/emmet-vim')
   call minpac#add('dag/vim-fish')
-  call minpac#add('ajh17/VimCompletesMe')
   " call minpac#add('hrsh7th/vim-vsnip')
   " call minpac#add('hrsh7th/vim-vsnip-integ')
 
@@ -80,6 +79,7 @@ runtime plugins/dirvish.vim
 runtime plugins/vim-sneak.vim
 runtime plugins/easyalign.vim
 runtime plugins/emmet.vim
+runtime plugins/fzf.vim
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
 command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
