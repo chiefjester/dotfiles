@@ -23,6 +23,7 @@ nnoremap <leader>ge :e **/<C-z><S-Tab>
 " remove usr/include from path, vim has deep roots from c
 set path-=/usr/include
 nnoremap <leader>gf :find **/<C-z><S-Tab>
+nnoremap <Leader>gs :G<cr>
 
 " for js settings
 set include=from
