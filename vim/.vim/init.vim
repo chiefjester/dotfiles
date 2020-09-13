@@ -56,6 +56,8 @@ if exists('*minpac#init')
   call minpac#add('christoomey/vim-tmux-navigator')
   call minpac#add('romainl/vim-cool')
   call minpac#add('mattn/emmet-vim')
+  call minpac#add('dag/vim-fish')
+  call minpac#add('ajh17/VimCompletesMe')
   " call minpac#add('hrsh7th/vim-vsnip')
   " call minpac#add('hrsh7th/vim-vsnip-integ')
 
