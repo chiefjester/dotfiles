@@ -3,11 +3,6 @@
 " " vimwiki folding settings
 let g:vimwiki_folding='custom'
 " nnoremap <leader>gg <Plug>VimwikiToggleListItem
-nmap <Leader>tl <Plug>VimwikiToggleListItem
-vmap <Leader>tl <Plug>VimwikiToggleListItem
-nmap <Leader>rl <Plug>VimwikiRemoveSingleCB
-vmap <Leader>rl <Plug>VimwikiRemoveSingleCB
-nmap <c-space> <nul>
 
 let work = {}
 let work.path = '~/wiki/work/'
@@ -18,9 +13,14 @@ let work.nested_syntaxes = { 'bash': 'bash', 'javascript': 'javascript'}
 let g:vimwiki_list = [work]
 
 " vimwiki foldlevel
-augroup vimwikiFoldLevel
+augroup vimwikiSpecifics
   autocmd!
-  autocmd BufEnter *.md set foldlevel=1
+  autocmd FileType vimwiki set foldlevel=2
+  autocmd FileType vimwiki nmap <Leader>tl <Plug>VimwikiToggleListItem
+  autocmd FileType vimwiki vmap <Leader>tl <Plug>VimwikiToggleListItem
+  autocmd FileType vimwiki nmap <Leader>rl <Plug>VimwikiRemoveSingleCB
+  autocmd FileType vimwiki vmap <Leader>rl <Plug>VimwikiRemoveSingleCB
+  autocmd FileType vimwiki nmap <c-space> <nul>
 augroup end
 
 let g:vimwiki_global_ext = 0
