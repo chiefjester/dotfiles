@@ -73,3 +73,5 @@ vnoremap . :normal.<CR>”
 " map W to w
 cnoreabbrev W update
 cnoreabbrev w update
+
+imap <leader>no **<C-R>=strftime('%c')<C-M>**
