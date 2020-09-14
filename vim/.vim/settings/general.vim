@@ -69,11 +69,6 @@ else
   set path+=**
 endif
 
-" remap shift W with w, solve the problem if typing W is too fast
-" also use update which only writes if there is an update
-cnoreabbrev W update
-cnoreabbrev w update
-
 " set rg to default 
 if executable("rg")
   set grepprg=rg\ --vimgrep
