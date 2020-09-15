@@ -17,7 +17,8 @@ set statusline+=%4c                                                             
 set statusline+=\|%-4{strwidth(getline('.'))}                                            " line length
 set statusline+=%{&buftype!='terminal'?expand('%:p:h:t').'\\'.expand('%:t'):expand('%')} " dir\filename.ext
 set statusline+=%m                                                                       " modified flag
-set statusline+=%r                                                                       " read only flag
+set statusline+=\ \| 
+set statusline+=\ <%h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P                    " fugitive
 set statusline+=%=                                                                       " left/right separator
 set statusline+=\ \|\ %{getcwd()}                                                        " current working directory
 set statusline+=\ [%{strlen(&ft)?(&ft\ .\ \',\'):''}                                     " filetype
