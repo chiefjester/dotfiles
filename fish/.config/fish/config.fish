@@ -58,7 +58,7 @@ alias tt="du -hsx * | sort -rh | head -10"
 alias mov="rsync -av --remove-source-files"
 alias vi="vim"
 
-set -gx PATH "$HOME/.fzf/bin" $PATH
+set -ga PATH "$HOME/.fzf/bin"
 
 alias mv='mvf'
 
