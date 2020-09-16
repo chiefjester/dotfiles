@@ -61,6 +61,7 @@ alias vi="vim"
 set -ga PATH "$HOME/.fzf/bin"
 
 alias mv='mvf'
+alias x='exit'
 
 set -ga PATH "$HOME/.gem/ruby/2.7.0/bin"
 set -ga PATH "$HOME/.cargo/bin"
