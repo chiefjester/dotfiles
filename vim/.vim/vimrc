@@ -42,8 +42,10 @@ if exists('*minpac#init')
 
   " colors
   call minpac#add('gruvbox-community/gruvbox')
-  call minpac#add('NLKNguyen/papercolor-theme', { 'type': 'opt' })
-  call minpac#add('sainnhe/gruvbox-material', { 'type': 'opt' })
+  " call minpac#add('joshdick/onedark.vim')
+  " call minpac#add('NLKNguyen/papercolor-theme', { 'type': 'opt' })
+  " call minpac#add('sainnhe/gruvbox-material', { 'type': 'opt' })
+  call minpac#add('ayu-theme/ayu-vim')
 
   " misc
   call minpac#add('capaj/vscode-standardjs-snippets')
@@ -57,6 +59,7 @@ if exists('*minpac#init')
   call minpac#add('romainl/vim-cool')
   call minpac#add('mattn/emmet-vim')
   call minpac#add('dag/vim-fish')
+  call minpac#add('powerman/vim-plugin-AnsiEsc')
   " call minpac#add('hrsh7th/vim-vsnip')
   " call minpac#add('hrsh7th/vim-vsnip-integ')
 
@@ -80,6 +83,8 @@ runtime plugins/vim-sneak.vim
 runtime plugins/easyalign.vim
 runtime plugins/emmet.vim
 runtime plugins/fzf.vim
+
+runtime ftplugin/man.vim
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
 command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
