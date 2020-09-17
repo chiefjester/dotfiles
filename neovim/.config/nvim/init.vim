@@ -41,6 +41,7 @@ if exists('*minpac#init')
   call minpac#add('kana/vim-textobj-user')
   call minpac#add('kana/vim-textobj-indent')
   call minpac#add('thinca/vim-textobj-between')
+  call minpac#add('dag/vim-fish')
 
 
   " for note taking
