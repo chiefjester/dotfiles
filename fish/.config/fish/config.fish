@@ -74,5 +74,5 @@ set -x fish_cursor_insert underscore
 
 starship init fish | source
 zoxide init fish | source
-# set -ga PATH "$HOME/.npm-global/bin"
+set -ga PATH "$HOME/.npm-global/bin"
 set -ga PATH "$HOME/go/bin"
