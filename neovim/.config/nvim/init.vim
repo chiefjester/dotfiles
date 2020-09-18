@@ -111,7 +111,7 @@ runtime plugins/lsp.vim
 " inoremap {<CR> {<CR>}<Esc>ko
 " inoremap [<CR> [<CR>]<Esc>ko
 " inoremap (<CR> (<CR>)<Esc>ko
-inoremap { {<CR>}<Esc>ko
+" inoremap { {<CR>}<Esc>ko
 
 " cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 " cnoreabbrev <expr> W((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
