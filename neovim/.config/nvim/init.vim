@@ -56,6 +56,7 @@ if exists('*minpac#init')
   call minpac#add('gruvbox-community/gruvbox')
   call minpac#add('NLKNguyen/papercolor-theme', { 'type': 'opt' })
   call minpac#add('sainnhe/gruvbox-material', { 'type': 'opt' })
+  call minpac#add('ayu-theme/ayu-vim')
 
   " misc
   call minpac#add('capaj/vscode-standardjs-snippets')
