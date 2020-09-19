@@ -121,4 +121,3 @@ cnoreabbrev W w
 
 set wildoptions=pum
 set pumblend=20
-let g:node_host_prog = system('volta which neovim-node-host | tr -d "\n"')
