@@ -2,7 +2,7 @@
 " linting without plugins in vim
 augroup Linting
   autocmd!
-  autocmd FileType javascript setlocal makeprg=eslint\ --format\ compact | setlocal errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %trror\ -\ %m,
+  autocmd FileType javascript setlocal makeprg=npx\ eslint\ --format\ compact | setlocal errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %trror\ -\ %m,
         \%f:\ line\ %l\\,\ col\ %c\\,\ %tarning\ -\ %m,
         \%-G%.%#
   autocmd BufWritePost *.js silent make! <afile> | silent redraw!
