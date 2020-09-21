@@ -2,7 +2,8 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-colorscheme gruvbox
+colorscheme ayu
+let ayucolor="dark"
 
 let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_transparent_background = 1
