@@ -73,6 +73,7 @@ if exists('*minpac#init')
   call minpac#add('junegunn/vim-easy-align')
   call minpac#add('junegunn/fzf', {'type': 'opt'})
   call minpac#add('junegunn/fzf.vim', {'type': 'opt'})
+
 endif
 
 " source lua, since it's not autosourced
@@ -80,6 +81,7 @@ packadd nvim-lsp
 packadd lsp-status.nvim
 packadd diagnostic-nvim
 packadd completion-nvim
+" packadd formatter.nvim
 
 " source settings
 runtime settings/general.vim
@@ -96,7 +98,7 @@ runtime plugins/dirvish.vim
 runtime plugins/easyalign.vim
 runtime plugins/emmet.vim
 runtime plugins/vimwiki.vim
-runtime plugins/fzf.vim
+" runtime plugins/fzf.vim
 " runtime plugins/coc.vim
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
@@ -117,7 +119,8 @@ runtime plugins/lsp.vim
 " cnoreabbrev <expr> W((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 
 " command W w 
-cnoreabbrev W w
+" cnoreabbrev W w
 
 set wildoptions=pum
 set pumblend=20
+
