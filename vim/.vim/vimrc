@@ -25,6 +25,8 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-unimpaired')
   call minpac#add('tpope/vim-fugitive')
   call minpac#add('tpope/vim-scriptease', { 'type': 'opt' })
+  " this is for Gbrowse
+  call minpac#add('tpope/vim-rhubarb')
 
   " additional text objects
   call minpac#add('kana/vim-textobj-entire')
