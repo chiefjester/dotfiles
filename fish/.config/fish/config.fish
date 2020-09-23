@@ -59,6 +59,8 @@ alias mov="rsync -av --remove-source-files"
 alias vi="vim"
 
 set -ga PATH "$HOME/.fzf/bin"
+set -ga PATH "$HOME/bin"
+set -gx DOCKER_HOST unix:///run/user/1000/docker.sock
 
 alias mv='mvf'
 alias x='exit'
