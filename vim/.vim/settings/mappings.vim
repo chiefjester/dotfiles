@@ -1,7 +1,7 @@
 let mapleader = "," " map leader
 
 " make it easy to edit dotfiles
-nmap <silent><Leader>ev :tabnew <bar>:tcd ~/dotfiles/vim/.vim/<bar>:e ./init.vim<bar>:setlocal path=.,,,**<cr><cr><cr>
+nmap <silent><Leader>ev :tabnew <bar>:tcd ~/dotfiles/vim/.vim/<bar>:e ./vimrc<bar>:setlocal path=.,,,**<cr><cr><cr>
 
 " mappings
 noremap <silent><Leader>z :update<cr>
