@@ -63,12 +63,6 @@ augroup autosourcing
   autocmd BufWritePost ~/dotfiles/**/* source $MYVIMRC
 augroup end
 
-if isdirectory("src")
-  set path=src/**
-else
-  set path+=**
-endif
-
 " set rg to default 
 if executable("rg")
   set grepprg=rg\ --vimgrep
