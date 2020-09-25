@@ -67,3 +67,7 @@ augroup end
 if executable("rg")
   set grepprg=rg\ --vimgrep
 endif
+
+" force fugitive to use vertical diff
+" https://github.com/tpope/vim-fugitive/issues/508#issuecomment-406823031
+set diffopt+=vertical
