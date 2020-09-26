@@ -24,8 +24,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ee', '<cmd>lua vim.lsp.util.show_line_diagnostics()<CR>', opts)
-
-  -- vim.fn.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", {noremap = true, silent = true})
+-- vim.fn.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", {noremap = true, silent = true})
   -- vim.fn.nvim_set_keymap("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", {noremap = true, silent = true})
   -- vim.fn.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.implementation()<CR>", {noremap = true, silent = true})
   -- vim.fn.nvim_set_keymap("n", "<c-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", {noremap = true, silent = true})
@@ -64,3 +63,24 @@ nvim_lsp.html.setup{
   on_attach = on_attach,
   capabilities = lsp_status.capabilities
 }
+
+require('format').setup({
+  javascript = {
+      prettier = function()
+        return {
+          exe = "prettier",
+          args = {"--stdin-filepath", vim.api.nvim_buf_get_name(0), '--single-quote'},
+          stdin = true
+        }
+      end
+  },
+  lua = {
+      luafmt = function()
+        return {
+          exe = "luafmt",
+          args = {"--indent-count", 2, "--stdin"},
+          stdin = true
+        }
+      end
+    }
+})
