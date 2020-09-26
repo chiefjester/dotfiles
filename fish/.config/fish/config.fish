@@ -3,8 +3,8 @@ alias gs="git status"
 alias ga="git add ."
 alias gc="git commit"
 alias tmux="tmux -2"
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+# alias pbcopy='xclip -selection clipboard'
+# alias pbpaste='xclip -selection clipboard -o'
 
 set -gx NPM_CONFIG_PREFIX "~/.npm-global"
 
