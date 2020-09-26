@@ -24,6 +24,5 @@ augroup vimwikiSpecifics
 augroup end
 
 let g:vimwiki_global_ext = 0
-" let g:vimwiki_ext2syntax = {}
 let g:vimwiki_listsyms = ' ○◐●✓'
 
