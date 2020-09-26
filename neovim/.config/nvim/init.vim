@@ -26,6 +26,7 @@ if exists('*minpac#init')
   call minpac#add('nvim-lua/lsp-status.nvim')
   call minpac#add('nathunsmitty/diagnostic-nvim')
   call minpac#add('nvim-lua/completion-nvim')
+  call minpac#add('mhartington/formatter.nvim')
   " call minpac#add('neoclide/coc.nvim', { 'branch': 'release' })
 
   " tpope plugins!
