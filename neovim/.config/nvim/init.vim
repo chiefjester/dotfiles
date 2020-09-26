@@ -128,3 +128,6 @@ runtime plugins/lsp.vim
 set wildoptions=pum
 set pumblend=20
 
+
+noremap <silent> <leader>f :Format<CR>
+" xmap <leader>gx :Format<CR>
