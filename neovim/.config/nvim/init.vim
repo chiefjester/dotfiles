@@ -27,10 +27,11 @@ if exists('*minpac#init')
   call minpac#add('nathunsmitty/diagnostic-nvim')
   call minpac#add('nvim-lua/completion-nvim')
   call minpac#add('mhartington/formatter.nvim')
+  call minpac#add('blackCauldron7/surround.nvim')
   " call minpac#add('neoclide/coc.nvim', { 'branch': 'release' })
 
   " tpope plugins!
-  call minpac#add('tpope/vim-surround')
+  " call minpac#add('tpope/vim-surround')
   call minpac#add('tpope/vim-repeat')
   call minpac#add('tpope/vim-commentary')
   call minpac#add('tpope/vim-unimpaired')
@@ -82,7 +83,9 @@ packadd nvim-lsp
 packadd lsp-status.nvim
 packadd diagnostic-nvim
 packadd completion-nvim
-" packadd formatter.nvim
+packadd formatter.nvim
+packadd surround.nvim
+lua require"surround".setup{}
 
 " source settings
 runtime settings/general.vim
