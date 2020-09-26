@@ -28,6 +28,7 @@ hi Pmenu guibg=#1a1a1a
 hi Term guibg=#1a1a1a
 hi Floating guibg=#000000 ctermbg=NONE
 
+highlight diffRemoved guifg=red
 highlight Comment cterm=italic gui=italic
 highlight htmlArg gui=italic cterm=italic
 highlight Type gui=italic cterm=italic
