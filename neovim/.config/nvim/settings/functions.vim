@@ -64,8 +64,12 @@ function! CCR()
     elseif cmdline =~ '\C^undol'
         " like :undolist but prompts for a change to undo
         return "\<CR>:u "
+    elseif cmdline =~ '\v\C^(W|w)'
+        " like :undolist but prompts for a change to undo
+        return "\<BS>update\<CR>"
     else
         return "\<CR>"
     endif
 endfunction
 cnoremap <expr> <CR> CCR()
+
