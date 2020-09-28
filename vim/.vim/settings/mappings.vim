@@ -70,10 +70,6 @@ nnoremap gdl :diffget //3<CR>
 " make . to work with visually selected lines
 vnoremap . :normal.<CR>”
 
-" map W to w
-cnoreabbrev W update
-cnoreabbrev w update
-
 imap <leader>no **<C-R>=strftime('%c')<C-M>**
 
 " ctrl-up and ctrl-down in tmux
