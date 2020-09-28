@@ -85,3 +85,5 @@ command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'
 command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
 command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
 
+nmap <ESC>[1;5A <C-Up>
+nmap <ESC>[1;5B <C-Down>
