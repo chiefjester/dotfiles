@@ -75,3 +75,7 @@ cnoreabbrev W update
 cnoreabbrev w update
 
 imap <leader>no **<C-R>=strftime('%c')<C-M>**
+
+" ctrl-up and ctrl-down in tmux
+nmap <ESC>[1;5A <C-Up>
+nmap <ESC>[1;5B <C-Down>
