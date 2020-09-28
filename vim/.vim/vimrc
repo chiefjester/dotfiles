@@ -72,6 +72,7 @@ runtime settings/colors.vim
 runtime settings/mappings.vim
 runtime settings/statusline.vim
 runtime settings/format.vim
+runtime settings/functions.vim
 
 " plugin settings
 runtime plugins/vimwiki.vim
