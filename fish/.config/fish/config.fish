@@ -3,6 +3,7 @@ alias gs="git status"
 alias ga="git add ."
 alias gc="git commit"
 alias tmux="tmux -2"
+alias v="vim"
 # alias pbcopy='xclip -selection clipboard'
 # alias pbpaste='xclip -selection clipboard -o'
 
