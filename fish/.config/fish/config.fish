@@ -67,6 +67,7 @@ set -gx DOCKER_HOST unix:///run/user/1000/docker.sock
 alias mv='mvf'
 alias x='exit'
 
+set -gp PATH "$HOME/bin"
 set -ga PATH "$HOME/.gem/ruby/2.7.0/bin"
 set -ga PATH "$HOME/.cargo/bin"
 # set -U fish_cursor_default line
