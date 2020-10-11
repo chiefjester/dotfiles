@@ -13,6 +13,7 @@ set -gx NPM_CONFIG_PREFIX "~/.npm-global"
 # set DISPLAY variable for WSL2
 if uname -a | grep 'microsoft' >/dev/null
   set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0
+  alias xdg-open=wslview
   # clean up tmp
   if type -q ~/bin/cleanup
     ~/bin/cleanup
