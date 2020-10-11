@@ -81,3 +81,6 @@ starship init fish | source
 zoxide init fish | source
 set -ga PATH "$HOME/.npm-global/bin"
 set -ga PATH "$HOME/go/bin"
+
+set -gx VISUAL vim
+set -gx EDITOR vim
