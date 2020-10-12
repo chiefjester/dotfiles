@@ -5,7 +5,7 @@ let g:vimwiki_folding='custom'
 " nnoremap <leader>gg <Plug>VimwikiToggleListItem
 
 let work = {}
-let work.path = '~/wiki/work/'
+let work.path = '~/wiki/'
 let work.syntax = 'markdown'
 let work.ext = '.md'
 let work.nested_syntaxes = { 'bash': 'bash', 'javascript': 'javascript'}
