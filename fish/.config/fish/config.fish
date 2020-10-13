@@ -10,6 +10,20 @@ alias v="vim"
 
 set -gx NPM_CONFIG_PREFIX "~/.npm-global"
 
+# set PATH
+set -gp PATH "$HOME/bin"
+set -ga PATH "$HOME/.gem/ruby/2.7.0/bin"
+set -ga PATH "$HOME/.cargo/bin"
+set -ga PATH "$HOME/.fzf/bin"
+set -ga PATH "$HOME/bin"
+set -gx DOCKER_HOST unix:///run/user/1000/docker.sock
+set -ga PATH "$HOME/.npm-global/bin"
+set -ga PATH "$HOME/go/bin"
+
+# set editor
+set -gx VISUAL vim
+set -gx EDITOR vim
+
 # set DISPLAY variable for WSL2
 if uname -a | grep 'microsoft' >/dev/null
   set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0
@@ -61,16 +75,10 @@ alias tt="du -hsx * | sort -rh | head -10"
 alias mov="rsync -av --remove-source-files"
 alias vi="vim"
 
-set -ga PATH "$HOME/.fzf/bin"
-set -ga PATH "$HOME/bin"
-set -gx DOCKER_HOST unix:///run/user/1000/docker.sock
 
 alias mv='mvf'
 alias x='exit'
 
-set -gp PATH "$HOME/bin"
-set -ga PATH "$HOME/.gem/ruby/2.7.0/bin"
-set -ga PATH "$HOME/.cargo/bin"
 # set -U fish_cursor_default line
 
 # set -x fish_cursor_default line
@@ -80,8 +88,4 @@ set -x fish_cursor_insert underscore
 
 starship init fish | source
 zoxide init fish | source
-set -ga PATH "$HOME/.npm-global/bin"
-set -ga PATH "$HOME/go/bin"
 
-set -gx VISUAL vim
-set -gx EDITOR vim
