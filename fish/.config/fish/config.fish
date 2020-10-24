@@ -30,7 +30,7 @@ if uname -a | grep 'microsoft' >/dev/null
   alias xdg-open=wslview
   # clean up tmp
   if type -q ~/bin/cleanup
-    ~/bin/cleanup
+    sudo ~/bin/cleanup
   end
 end
 

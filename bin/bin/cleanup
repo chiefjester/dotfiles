@@ -1,2 +1,2 @@
 #!/bin/bash
-fd . /tmp --changed-before 1w -H -x rm -rf
+/home/thefoo/.cargo/bin/fd . /tmp --changed-before 1w -H -x rm -rf
