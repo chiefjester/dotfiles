@@ -11,6 +11,7 @@ alias v="vim"
 set -gx NPM_CONFIG_PREFIX "~/.npm-global"
 
 # set PATH
+set -gp PATH "$HOME/.npm-global/bin"
 set -gp PATH "$HOME/bin"
 set -ga PATH "$HOME/.gem/ruby/2.7.0/bin"
 set -ga PATH "$HOME/.cargo/bin"
