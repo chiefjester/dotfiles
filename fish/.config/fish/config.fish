@@ -17,7 +17,6 @@ set -ga PATH "$HOME/.gem/ruby/2.7.0/bin"
 set -ga PATH "$HOME/.cargo/bin"
 set -ga PATH "$HOME/.fzf/bin"
 set -ga PATH "$HOME/bin"
-set -gx DOCKER_HOST unix:///run/user/1000/docker.sock
 set -ga PATH "$HOME/.npm-global/bin"
 set -ga PATH "$HOME/go/bin"
 
