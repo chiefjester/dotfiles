@@ -13,6 +13,9 @@ if &compatible
   set nocompatible
 endif
 
+packadd minpac
+call minpac#init()
+
 if exists('*minpac#init')
   " packadd minpac
   call minpac#init()
