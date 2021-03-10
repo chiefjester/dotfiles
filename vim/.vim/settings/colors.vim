@@ -20,6 +20,10 @@ set background=dark
 hi Normal guibg=NONE ctermbg=NONE
 hi SignColumn guibg=NONE
 
+" spelling
+hi clear SpellBad
+hi SpellBad cterm=underline
+
 " hi netrwMarkFile guibg=#ff00ff ctermbg=#ff00ff
 hi netrwMarkFile guibg=#ff00ff
 
