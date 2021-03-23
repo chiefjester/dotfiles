@@ -25,6 +25,7 @@ set -gx VISUAL vim
 set -gx EDITOR vim
 
 # set DISPLAY variable for WSL2
+# look for alternative
 if uname -a | grep 'microsoft' >/dev/null
   set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0
   alias xdg-open=wslview
