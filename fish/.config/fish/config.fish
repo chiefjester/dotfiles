@@ -13,6 +13,7 @@ set -gx NPM_CONFIG_PREFIX "~/.npm-global"
 # set PATH
 set -gp PATH "$HOME/.npm-global/bin"
 set -gp PATH "$HOME/bin"
+set -gp PATH "$HOME/.local/bin"
 set -ga PATH "$HOME/.gem/ruby/2.7.0/bin"
 set -ga PATH "$HOME/.cargo/bin"
 set -ga PATH "$HOME/.fzf/bin"
@@ -27,7 +28,7 @@ set -gx EDITOR vim
 # set DISPLAY variable for WSL2
 # look for alternative
 if uname -a | grep 'microsoft' >/dev/null
-  set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0
+  # set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0
   alias xdg-open=wslview
   # clean up tmp
   if type -q ~/bin/cleanup
@@ -82,11 +83,15 @@ alias x='exit'
 
 # set -U fish_cursor_default line
 
-# set -x fish_cursor_default line
-# set -x fish_cursor_visual line
+set -x fish_cursor_default line
+set -x fish_cursor_visual underscore
 set -x fish_cursor_insert underscore
-# set -x fish_cursor_replace_one underscore
+set -x fish_cursor_replace_one underscore
 
 starship init fish | source
 zoxide init fish | source
+
+
+# Generated for envman. Do not edit.
+test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"
 

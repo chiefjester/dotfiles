@@ -1,3 +1,4 @@
 env
 /.vim/
 fish/.config/fish/functions/
+vim/.vim/pack

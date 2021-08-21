@@ -1,4 +1,4 @@
-set guicursor=                              " don't set any guicursor
+" set guicursor=                              " don't set any guicursor
 syntax enable                               " enable syntax detection
 filetype indent on                          " add indent on file type
 filetype plugin on                          " turn on plugin for file type
