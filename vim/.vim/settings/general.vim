@@ -1,3 +1,4 @@
+set ttymouse=sgr                            " make mouse work when dragging windows
 " set guicursor=                              " don't set any guicursor
 syntax enable                               " enable syntax detection
 filetype indent on                          " add indent on file type
@@ -17,7 +18,6 @@ set linespace=14                            " spacing between lines
 se mouse+=a                                 " enable mouse support
 set noswapfile                              " disable creation of .swap
 set hidden                                  " hides buffer instead of closing them
-set clipboard+=unnamedplus                  " make os's clipboard work
 set ic                                      " set ignore case when searching
 set nocompatible                            " enable vim features by opting out of vi compatibility
 set laststatus=1                            " always show the status line
