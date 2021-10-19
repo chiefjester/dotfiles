@@ -12,8 +12,8 @@ set -gx NPM_CONFIG_PREFIX "~/.npm-global"
 
 # set PATH
 set -gp PATH "$HOME/.npm-global/bin"
-set -gp PATH "$HOME/bin"
 set -gp PATH "$HOME/.local/bin"
+set -gp PATH "$HOME/bin"
 set -ga PATH "$HOME/.gem/ruby/2.7.0/bin"
 set -ga PATH "$HOME/.cargo/bin"
 set -ga PATH "$HOME/.fzf/bin"
@@ -25,16 +25,16 @@ set -ga PATH "$HOME/go/bin"
 set -gx VISUAL vim
 set -gx EDITOR vim
 
-# set DISPLAY variable for WSL2
-# look for alternative
-if uname -a | grep 'microsoft' >/dev/null
-  # set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0
-  alias xdg-open=wslview
-  # clean up tmp
-  if type -q ~/bin/cleanup
-    sudo ~/bin/cleanup
-  end
-end
+# # set DISPLAY variable for WSL2
+# # look for alternative
+# if uname -a | grep 'microsoft' >/dev/null
+#   # set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0
+#   alias xdg-open=wslview
+#   # clean up tmp
+#   if type -q ~/bin/cleanup
+#     sudo ~/bin/cleanup
+#   end
+# end
 
 # use fd for fzf commands
 set -gx FZF_DEFAULT_COMMAND 'rg --hidden --files'
