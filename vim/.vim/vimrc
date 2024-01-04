@@ -59,6 +59,7 @@ if exists('*minpac#init')
   call minpac#add('cespare/vim-toml')
   call minpac#add('yuezk/vim-js')
   call minpac#add('MaxMEllon/vim-jsx-pretty')
+  call minpac#add('leafOfTree/vim-svelte-plugin')
 
   " general enhancements
   call minpac#add('editorconfig/editorconfig-vim')
