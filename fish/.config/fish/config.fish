@@ -21,6 +21,10 @@ set -ga PATH "$HOME/.fzf/bin"
 set -ga PATH "$HOME/bin"
 # set -gx DOCKER_HOST unix:///run/user/1000/docker.sock
 set -ga PATH "$HOME/go/bin"
+set -ga PATH "$HOME/.fly/bin"
+set -ga PATH /usr/local/go/bin
+set -ga PATH "$HOME/.deno/bin"
+set -gx GOPATH "$HOME/go-workspace"
 
 # set editor
 set -gx VISUAL vim
