@@ -2,6 +2,7 @@ alias npmdelete="find . -name 'node_modules' -type d -prune -print -exec rm -rf 
 alias gs="git status"
 alias ga="git add ."
 alias gc="git commit"
+alias gp="git push"
 alias tmux="tmux -2"
 alias ,q="exit"
 alias v="vim"
