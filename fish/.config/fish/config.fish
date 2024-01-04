@@ -59,26 +59,26 @@ function sudobangbang --on-event fish_postexec
 end
 
 function fish_user_key_bindings
-  for mode in insert default visual
-    bind -M $mode \cf forward-char
-  end
+    for mode in insert default visual
+        bind -M $mode \cf forward-char
+    end
 end
 
 # based from https://superuser.com/questions/449687/using-cd-to-go-up-multiple-directory-levels/449705
 # improve cdf version
 function cd_up
-  cd (printf "%.s../" (seq $argv))
+    cd (printf "%.s../" (seq $argv))
 end
 
 alias 'cd..'='cd_up'
 
 # mkdir before moving
 function mvf
-  set isFolder (string sub --start=-1 $argv[2])
-  if not test -d $argv[2]; and test "$isFolder" = "/"
-    mkdir -p -- $argv[2]
-  end
-  /usr/bin/mv $argv
+    set isFolder (string sub --start=-1 $argv[2])
+    if not test -d $argv[2]; and test "$isFolder" = /
+        mkdir -p -- $argv[2]
+    end
+    /usr/bin/mv $argv
 end
 
 alias tt="du -hsx * | sort -rh | head -10"
