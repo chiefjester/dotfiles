@@ -30,6 +30,9 @@ set -gx GOPATH "$HOME/go-workspace"
 set -gx VISUAL vim
 set -gx EDITOR vim
 
+# set BROWSER
+set -gx BROWSER "powershell.exe /C start"
+
 # # set DISPLAY variable for WSL2
 # # look for alternative
 # if uname -a | grep 'microsoft' >/dev/null
