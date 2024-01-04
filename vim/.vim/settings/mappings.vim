@@ -4,7 +4,7 @@ let mapleader = "," " map leader
 nmap <silent><Leader>ev :tabnew <bar>:tcd ~/dotfiles/vim/.vim/<bar>:e ./vimrc<bar>:setlocal path=.,,,**<cr><cr><cr>
 
 " mappings
-noremap <silent><Leader>z :update<cr>
+noremap <Leader>z :update<cr>
 noremap <silent><Leader>q :q<cr>
 noremap <silent><Leader>Q :q!<cr>
 noremap <silent><Leader>a :qa<cr>
