@@ -25,6 +25,8 @@ set path-=/usr/include
 nnoremap <leader>gf :find **/<C-z><S-Tab>
 nnoremap <Leader>gs :G<cr>
 
+nmap <M-]> ]
+
 " for js settings
 set include=from
 set suffixesadd=.js
