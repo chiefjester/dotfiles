@@ -34,6 +34,8 @@ if exists('*minpac#init')
   " this is for Gbrowse
   call minpac#add('tpope/vim-rhubarb')
 
+  call minpac#add('github/copilot.vim')
+
   " additional text objects
   call minpac#add('kana/vim-textobj-entire')
   call minpac#add('kana/vim-textobj-user')
