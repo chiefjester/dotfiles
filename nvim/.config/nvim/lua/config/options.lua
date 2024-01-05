@@ -5,7 +5,7 @@
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
-vim.o.guicursor = "n-v-c-sm-i-ci-ve:block,r-cr-o:hor20,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor"
+vim.o.guicursor = "n-v-c-sm-i-ci-ve:ver25,r-cr-o:hor20,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor"
 vim.opt.foldtext = "v:lua.require'lazyvim.util'.ui.foldtext()"
 
 -- fold settings
