@@ -34,77 +34,26 @@ set -gx EDITOR vim
 # set BROWSER
 set -gx BROWSER "powershell.exe /C start"
 
-# # set DISPLAY variable for WSL2
-# # look for alternative
-# if uname -a | grep 'microsoft' >/dev/null
-#   # set -gx DISPLAY (grep nameserver /etc/resolv.conf | awk '{print $2}'):0
-#   alias xdg-open=wslview
-#   # clean up tmp
-#   if type -q ~/bin/cleanup
-#     sudo ~/bin/cleanup
-#   end
-# end
+# init starship and zoxide
+starship init fish | source
+zoxide init fish | source
 
-# use fd for fzf commands
-set -gx FZF_DEFAULT_COMMAND 'rg --hidden --files'
-set -gx FZF_OPEN_COMMAND $FZF_DEFAULT_COMMAND
-set -gx FZF_ALT_C_COMMAND 'fd --type d . --color=never'
-set -gx FZF_FIND_FILE_COMMAND $FZF_DEFAULT_COMMAND
-set -gx FZF_CD_COMMAND $FZF_ALT_C_COMMAND
-set -gx FZF_CD_WITH_HIDDEN_COMMAND 'fd --type d . --color=never --hidden --exclude .npm --exclude .git'
+# bun
+set -gx BUN_INSTALL "/home/heyfoo/.bun"
+fish_add_path "/home/heyfoo/.bun/bin"
+
+function fish_hybrid_key_bindings --description \
+    "Vi-style bindings that inherit emacs-style bindings in all modes"
+    for mode in default insert visual
+        fish_default_key_bindings -M $mode
+    end
+    fish_vi_key_bindings --no-erase
+end
+set -g fish_key_bindings fish_hybrid_key_bindings
+
 
 function sudobangbang --on-event fish_postexec
     abbr !! sudo $argv[1]
     # bind "&&" 'commandline -i "; and"'
     # bind "||" 'commandline -i "; or"'
 end
-
-function fish_user_key_bindings
-    for mode in insert default visual
-        bind -M $mode \cf forward-char
-    end
-end
-
-# based from https://superuser.com/questions/449687/using-cd-to-go-up-multiple-directory-levels/449705
-# improve cdf version
-function cd_up
-    cd (printf "%.s../" (seq $argv))
-end
-
-alias 'cd..'='cd_up'
-
-# mkdir before moving
-function mvf
-    set isFolder (string sub --start=-1 $argv[2])
-    if not test -d $argv[2]; and test "$isFolder" = /
-        mkdir -p -- $argv[2]
-    end
-    /usr/bin/mv $argv
-end
-
-alias tt="du -hsx * | sort -rh | head -10"
-alias mov="rsync -av --remove-source-files"
-alias vi="vim"
-
-
-alias mv='mvf'
-alias x='exit'
-
-# set -U fish_cursor_default line
-
-set -x fish_cursor_default line
-set -x fish_cursor_visual underscore
-set -x fish_cursor_insert underscore
-set -x fish_cursor_replace_one underscore
-
-starship init fish | source
-zoxide init fish | source
-
-
-# Generated for envman. Do not edit.
-test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"
-
-
-# bun
-set -gx BUN_INSTALL "/home/heyfoo/.bun"
-fish_add_path "/home/heyfoo/.bun/bin"
