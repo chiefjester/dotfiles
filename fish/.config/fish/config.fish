@@ -1,13 +1,14 @@
-alias npmdelete="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
-alias gs="git status"
-alias ga="git add ."
-alias gc="git commit"
-alias gp="git push"
-alias tmux="tmux -2"
-alias ,q="exit"
-alias v="vim"
-# alias pbcopy='xclip -selection clipboard'
-# alias pbpaste='xclip -selection clipboard -o'
+if status is-interactive
+    alias npmdelete="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
+    alias gs="git status"
+    alias ga="git add ."
+    alias gc="git commit"
+    alias gp="git push"
+    alias tmux="tmux -2"
+    alias ,q="exit"
+    alias v="vim"
+    # Commands to run in interactive sessions can go here
+end
 
 set -gx NPM_CONFIG_PREFIX "~/.npm-global"
 
