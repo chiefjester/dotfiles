@@ -17,6 +17,7 @@ vim.wo.fillchars = "fold: "
 vim.wo.foldnestmax = 3
 vim.wo.foldminlines = 1
 
+-- open splits above
 vim.o.splitbelow = false
 
 -- vim.api.nvim_set_hl(0, "Normal", { ctermfg = White, ctermbg = Black })
