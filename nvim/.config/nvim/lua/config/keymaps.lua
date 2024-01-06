@@ -6,6 +6,8 @@
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- general enhancements
+vim.keymap.del("n", "<leader>qq")
+vim.keymap.del({ "x", "n" }, "<leader>qÞ")
 vim.keymap.set("n", "<leader>q", ":silent q<cr>", { desc = "Close Window", silent = true })
 vim.keymap.set("n", "<leader>z", ":silent update<cr>", { desc = "Save", silent = true })
 vim.keymap.set("n", "<leader>o", ":only<cr>", { desc = "Only", silent = true })
