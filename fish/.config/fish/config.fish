@@ -13,18 +13,19 @@ end
 set -gx NPM_CONFIG_PREFIX "~/.npm-global"
 
 # set PATH
-set -gp PATH "$HOME/.npm-global/bin"
-set -gp PATH "$HOME/.local/bin"
-set -gp PATH "$HOME/bin"
-set -ga PATH "$HOME/.gem/ruby/2.7.0/bin"
-set -ga PATH "$HOME/.cargo/bin"
-set -ga PATH "$HOME/.fzf/bin"
-set -ga PATH "$HOME/bin"
-# set -gx DOCKER_HOST unix:///run/user/1000/docker.sock
-set -ga PATH "$HOME/go/bin"
-set -ga PATH "$HOME/.fly/bin"
-set -ga PATH /usr/local/go/bin
-set -ga PATH "$HOME/.deno/bin"
+fish_add_path "$HOME/.npm-global/bin"
+fish_add_path "$HOME/.local/bin"
+fish_add_path "$HOME/bin"
+
+fish_add_path -a "$HOME/.gem/ruby/2.7.0/bin"
+fish_add_path -a "$HOME/.cargo/bin"
+fish_add_path -a "$HOME/.fzf/bin"
+fish_add_path -a "$HOME/bin"
+fish_add_path -a "$HOME/go/bin"
+fish_add_path -a "$HOME/.fly/bin"
+fish_add_path -a /usr/local/go/bin
+fish_add_path -a "$HOME/.deno/bin"
+
 set -gx GOPATH "$HOME/go-workspace"
 
 # set editor
