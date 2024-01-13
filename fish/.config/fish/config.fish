@@ -12,20 +12,19 @@ end
 
 set -gx NPM_CONFIG_PREFIX "~/.npm-global"
 
-set -e fish_user_paths
 # set PATH
-fish_add_path "$HOME/.npm-global/bin"
-fish_add_path "$HOME/.local/bin"
-fish_add_path "$HOME/bin"
+fish_add_path -g "$HOME/.npm-global/bin"
+fish_add_path -g "$HOME/.local/bin"
+fish_add_path -g "$HOME/bin"
 
-fish_add_path -a "$HOME/.gem/ruby/2.7.0/bin"
-fish_add_path -a "$HOME/.cargo/bin"
-fish_add_path -a "$HOME/.fzf/bin"
-fish_add_path -a "$HOME/bin"
-fish_add_path -a "$HOME/go/bin"
-fish_add_path -a "$HOME/.fly/bin"
-fish_add_path -a /usr/local/go/bin
-fish_add_path -a "$HOME/.deno/bin"
+fish_add_path -ag "$HOME/.gem/ruby/2.7.0/bin"
+fish_add_path -ag "$HOME/.cargo/bin"
+fish_add_path -ag "$HOME/.fzf/bin"
+fish_add_path -ag "$HOME/bin"
+fish_add_path -ag "$HOME/go/bin"
+fish_add_path -ag "$HOME/.fly/bin"
+fish_add_path -ag /usr/local/go/bin
+fish_add_path -ag "$HOME/.deno/bin"
 
 set -gx GOPATH "$HOME/go-workspace"
 
