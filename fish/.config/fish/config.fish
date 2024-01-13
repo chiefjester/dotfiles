@@ -12,6 +12,7 @@ end
 
 set -gx NPM_CONFIG_PREFIX "~/.npm-global"
 
+set -e fish_user_paths
 # set PATH
 fish_add_path "$HOME/.npm-global/bin"
 fish_add_path "$HOME/.local/bin"
