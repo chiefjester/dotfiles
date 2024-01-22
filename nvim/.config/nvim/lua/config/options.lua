@@ -22,3 +22,7 @@ vim.o.splitbelow = false
 
 -- vim.api.nvim_set_hl(0, "Normal", { ctermfg = White, ctermbg = Black })
 vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#1a1a1a" })
+
+-- set hybrid
+vim.wo.number = true
+vim.wo.relativenumber = true
