@@ -17,6 +17,11 @@ vim.wo.fillchars = "fold: "
 vim.wo.foldnestmax = 3
 vim.wo.foldminlines = 1
 
+-- set wrap
+vim.wo.wrap = true
+vim.wo.linebreak = true
+vim.wo.list = false
+
 -- open splits above
 vim.o.splitbelow = false
 
