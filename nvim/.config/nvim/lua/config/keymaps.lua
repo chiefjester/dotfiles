@@ -12,3 +12,4 @@ vim.keymap.set("n", "<leader>q", ":silent q<cr>", { desc = "Close Window", silen
 vim.keymap.set("n", "<leader>z", ":silent update<cr>", { desc = "Save", silent = true })
 vim.keymap.set("n", "<leader>o", ":only<cr>", { desc = "Only", silent = true })
 vim.keymap.set("n", "<leader>gs", ":Git<cr>", { desc = "Git Status", silent = true })
+vim.keymap.set("n", "<leader>b", ":ls<cr>:b ", { desc = "Buffer", silent = true })
