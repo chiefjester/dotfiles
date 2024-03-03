@@ -25,6 +25,8 @@ vim.wo.list = false
 -- open splits above
 vim.o.splitbelow = false
 
+vim.o.completeopt = "menu"
+
 -- vim.api.nvim_set_hl(0, "Normal", { ctermfg = White, ctermbg = Black })
 vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#1a1a1a" })
 
