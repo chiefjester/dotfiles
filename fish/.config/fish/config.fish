@@ -60,4 +60,5 @@ function sudobangbang --on-event fish_postexec
     # bind "||" 'commandline -i "; or"'
 end
 
+# load custom fish (need to clone this first)
 source ~/personal/custom-fish/line.fish
