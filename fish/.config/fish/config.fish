@@ -59,3 +59,5 @@ function sudobangbang --on-event fish_postexec
     # bind "&&" 'commandline -i "; and"'
     # bind "||" 'commandline -i "; or"'
 end
+
+source ~/personal/custom-fish/line.fish
